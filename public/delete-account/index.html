@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Delete Your Account | Tikizia Games
+  </title>
+
+  <meta
+    name="description"
+    content="Request deletion of your Tikizia Games account and associated data, including Conoche accounts."
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Permanent+Marker&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    :root {
+      --background: #050505;
+      --card: #101010;
+      --text: #f5f5f5;
+      --muted: #aaaaaa;
+      --orange: #ff6a00;
+      --orange-light: #ff8f2a;
+      --border: rgba(255, 255, 255, 0.09);
+      --max-width: 900px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(
+          circle at 50% -10%,
+          rgba(255, 106, 0, 0.12),
+          transparent 30%
+        ),
+        var(--background);
+      color: var(--text);
+      font-family: "Inter", Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--orange);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .top-bar {
+      border-bottom: 1px solid var(--border);
+      background: rgba(5, 5, 5, 0.94);
+    }
+
+    .top-inner {
+      width: min(calc(100% - 40px), var(--max-width));
+      min-height: 72px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--orange);
+      font-family: "Permanent Marker", cursive;
+      font-size: 1.35rem;
+    }
+
+    .back-link {
+      color: #cccccc;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .cr-stripe {
+      width: 100%;
+      height: 6px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    }
+
+    .blue {
+      background: #002b7f;
+    }
+
+    .white {
+      background: #ffffff;
+    }
+
+    .red {
+      background: #ce1126;
+    }
+
+    main {
+      width: min(calc(100% - 40px), var(--max-width));
+      margin: auto;
+      padding: 80px 0 100px;
+    }
+
+    .kicker {
+      margin: 0 0 10px;
+      color: var(--orange);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .subtitle {
+      max-width: 700px;
+      margin: 0 0 45px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .delete-box {
+      padding: 32px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+    }
+
+    .delete-box h2 {
+      margin: 0 0 12px;
+      font-size: 1.8rem;
+    }
+
+    .delete-box p {
+      color: var(--muted);
+    }
+
+    .delete-button {
+      display: inline-flex;
+      min-height: 52px;
+      margin-top: 18px;
+      padding: 0 24px;
+      align-items: center;
+      justify-content: center;
+      background:
+        linear-gradient(
+          135deg,
+          var(--orange),
+          var(--orange-light)
+        );
+      border-radius: 999px;
+      color: #111111;
+      font-weight: 800;
+    }
+
+    .delete-button:hover {
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    section {
+      margin-top: 50px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.65rem;
+      letter-spacing: -0.03em;
+    }
+
+    h3 {
+      margin: 28px 0 8px;
+      font-size: 1.05rem;
+    }
+
+    p,
+    li {
+      color: var(--muted);
+    }
+
+    ul,
+    ol {
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    strong {
+      color: #eeeeee;
+    }
+
+    .notice {
+      margin-top: 30px;
+      padding: 22px;
+      border-left: 4px solid var(--orange);
+      background: rgba(255, 106, 0, 0.07);
+      border-radius: 0 14px 14px 0;
+    }
+
+    .notice p {
+      margin: 0;
+    }
+
+    .contact-box {
+      margin-top: 60px;
+      padding: 28px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+    }
+
+    footer {
+      padding: 30px 20px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: #666666;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 600px) {
+
+      .top-inner {
+        padding: 14px 0;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      main {
+        padding-top: 60px;
+      }
+
+      .delete-box {
+        padding: 24px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header class="top-bar">
+
+    <div class="top-inner">
+
+      <a
+        href="/"
+        class="brand"
+      >
+        TIKIZIA GAMES
+      </a>
+
+      <a
+        href="/"
+        class="back-link"
+      >
+        ← Back to Tikizia Games
+      </a>
+
+    </div>
+
+    <div class="cr-stripe">
+      <div class="blue"></div>
+      <div class="white"></div>
+      <div class="red"></div>
+      <div class="white"></div>
+      <div class="blue"></div>
+    </div>
+
+  </header>
+
+  <main>
+
+    <p class="kicker">
+      ACCOUNT & DATA CONTROL
+    </p>
+
+    <h1>
+      Delete Your Account
+    </h1>
+
+    <p class="subtitle">
+      This page allows users of Tikizia Games
+      products, including Conoche, to request
+      deletion of their account and associated
+      account data.
+    </p>
+
+    <div class="delete-box">
+
+      <h2>
+        Request account deletion
+      </h2>
+
+      <p>
+        To request deletion, send an email to
+        Tikizia Games Support using the button below.
+      </p>
+
+      <p>
+        If possible, send the request from the
+        email address associated with your account
+        so we can verify ownership.
+      </p>
+
+      <a
+        class="delete-button"
+        href="mailto:support@tikiziagames.com?subject=Tikizia%20Games%20Account%20Deletion%20Request&body=Hello%20Tikizia%20Games%2C%0A%0AI%20would%20like%20to%20delete%20my%20account%20and%20associated%20account%20data.%0A%0AGame%3A%0AAccount%20email%3A%0AUsername%20or%20display%20name%3A%0A%0AThank%20you."
+      >
+        Request Account Deletion
+      </a>
+
+    </div>
+
+    <section>
+
+      <h2>
+        How the deletion process works
+      </h2>
+
+      <ol>
+
+        <li>
+          Click
+          <strong>
+            Request Account Deletion
+          </strong>
+          above.
+        </li>
+
+        <li>
+          Tell us which Tikizia Games product
+          you use, such as Conoche.
+        </li>
+
+        <li>
+          Provide the email address associated
+          with your account and, if applicable,
+          your username or display name.
+        </li>
+
+        <li>
+          We may contact you to verify that
+          you own the account before processing
+          the deletion.
+        </li>
+
+        <li>
+          After verification, we will process
+          the deletion of the account and its
+          associated personal data.
+        </li>
+
+      </ol>
+
+    </section>
+
+    <section>
+
+      <h2>
+        What will be deleted?
+      </h2>
+
+      <p>
+        Depending on the Tikizia Games product
+        and the features you used, account
+        deletion may include deletion of:
+      </p>
+
+      <ul>
+        <li>Your Tikizia Games user account</li>
+        <li>Email address associated with the account</li>
+        <li>Username or display name</li>
+        <li>Profile information</li>
+        <li>Profile photo or avatar associated with the account</li>
+        <li>Player connections associated with the account</li>
+        <li>Invite and connection information</li>
+        <li>Game progress associated with the account</li>
+        <li>Game answers and responses associated with the account</li>
+        <li>Account-specific game history</li>
+        <li>Other personal data associated with the account</li>
+      </ul>
+
+    </section>
+
+    <section>
+
+      <h2>
+        Information that may be retained
+      </h2>
+
+      <p>
+        Limited information may be retained
+        when reasonably necessary or required
+        for legal, accounting, security,
+        fraud-prevention or dispute-resolution
+        purposes.
+      </p>
+
+      <p>
+        For example, records related to purchases
+        or financial transactions may need to be
+        retained for the period required by
+        applicable law.
+      </p>
+
+      <p>
+        Limited copies of deleted information
+        may also remain temporarily in secure
+        backups until those backups are replaced
+        through normal backup and disaster-recovery
+        processes.
+      </p>
+
+      <p>
+        Information retained for these purposes
+        will not be used to continue providing
+        the deleted account as an active user account.
+      </p>
+
+    </section>
+
+    <section>
+
+      <h2>
+        Processing time
+      </h2>
+
+      <p>
+        We aim to process verified account deletion
+        requests as quickly as reasonably possible.
+      </p>
+
+      <p>
+        Most verified requests are intended to be
+        completed within 30 days. If additional
+        time is required because of legal,
+        security or technical requirements,
+        we will communicate that where appropriate.
+      </p>
+
+    </section>
+
+    <section>
+
+      <h2>
+        Subscriptions and Google Play purchases
+      </h2>
+
+      <div class="notice">
+
+        <p>
+          <strong>
+            Important:
+          </strong>
+          deleting your Tikizia Games account
+          does not necessarily cancel an active
+          Google Play subscription.
+        </p>
+
+      </div>
+
+      <p>
+        If you have an active subscription,
+        manage or cancel it through your
+        Google Play account.
+      </p>
+
+      <p>
+        Google Play may retain its own purchase
+        or transaction records according to
+        Google's policies and legal obligations.
+      </p>
+
+    </section>
+
+    <section>
+
+      <h2>
+        Delete your account from the app
+      </h2>
+
+      <p>
+        Tikizia Games products that allow users
+        to create an account will provide a
+        discoverable account deletion option
+        within the app or a direct path from
+        the app to the account deletion process.
+      </p>
+
+      <p>
+        The external request option on this page
+        remains available even if you no longer
+        have the app installed.
+      </p>
+
+    </section>
+
+    <section>
+
+      <h2>
+        Privacy
+      </h2>
+
+      <p>
+        More information about how Tikizia Games
+        handles personal information is available
+        in our Privacy Policy.
+      </p>
+
+      <p>
+        <a href="/privacy/">
+          Read the Tikizia Games Privacy Policy
+        </a>
+      </p>
+
+    </section>
+
+    <section>
+
+      <h2>
+        Need help?
+      </h2>
+
+      <div class="contact-box">
+
+        <strong>
+          Tikizia Games Support
+        </strong>
+
+        <p>
+          Costa Rica
+        </p>
+
+        <p>
+          Email:
+          <br>
+          <a href="mailto:support@tikiziagames.com">
+            support@tikiziagames.com
+          </a>
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Tikizia Games · Made in Costa Rica 🇨🇷
+  </footer>
+
+</body>
+
+</html>
