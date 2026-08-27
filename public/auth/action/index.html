@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Account Action | Conoche?
+  </title>
+
+  <meta
+    name="description"
+    content="Complete your Conoche? account action securely through Tikizia Games."
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Permanent+Marker&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    :root {
+      --background: #050505;
+      --card: #101010;
+      --text: #f5f5f5;
+      --muted: #aaaaaa;
+      --orange: #ff6a00;
+      --orange-light: #ff8f2a;
+      --success: #62d889;
+      --error: #ff6b6b;
+      --border: rgba(255, 255, 255, 0.09);
+      --max-width: 760px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(
+          circle at 50% -10%,
+          rgba(255, 106, 0, 0.14),
+          transparent 35%
+        ),
+        var(--background);
+      color: var(--text);
+      font-family: "Inter", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      background: rgba(5, 5, 5, 0.94);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      width: min(calc(100% - 40px), var(--max-width));
+      min-height: 74px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--orange);
+      font-family: "Permanent Marker", cursive;
+      font-size: 1.4rem;
+    }
+
+    .home-link {
+      color: #cccccc;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .cr-stripe {
+      width: 100%;
+      height: 6px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    }
+
+    .blue {
+      background: #002b7f;
+    }
+
+    .white {
+      background: #ffffff;
+    }
+
+    .red {
+      background: #ce1126;
+    }
+
+    main {
+      width: min(calc(100% - 40px), var(--max-width));
+      margin: auto;
+      padding: 80px 0 100px;
+    }
+
+    .kicker {
+      margin: 0 0 10px;
+      color: var(--orange);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2.8rem, 8vw, 5rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .subtitle {
+      max-width: 620px;
+      margin: 0 0 38px;
+      color: var(--muted);
+    }
+
+    .card {
+      padding: 32px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+    }
+
+    .status-icon {
+      width: 52px;
+      height: 52px;
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255, 106, 0, 0.12);
+      color: var(--orange);
+      font-size: 1.5rem;
+      font-weight: 900;
+    }
+
+    .status-icon.success {
+      background: rgba(98, 216, 137, 0.12);
+      color: var(--success);
+    }
+
+    .status-icon.error {
+      background: rgba(255, 107, 107, 0.12);
+      color: var(--error);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.8rem;
+      letter-spacing: -0.03em;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .email {
+      color: #ffffff;
+      font-weight: 700;
+      word-break: break-word;
+    }
+
+    .form-group {
+      margin-top: 22px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #dddddd;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    input {
+      width: 100%;
+      min-height: 52px;
+      padding: 0 16px;
+      background: #080808;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 12px;
+      font: inherit;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: var(--orange);
+    }
+
+    .button {
+      min-height: 52px;
+      margin-top: 22px;
+      padding: 0 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      border-radius: 999px;
+      background:
+        linear-gradient(
+          135deg,
+          var(--orange),
+          var(--orange-light)
+        );
+      color: #111111;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .button:disabled {
+      opacity: 0.55;
+      cursor: wait;
+    }
+
+    .secondary-link {
+      display: inline-block;
+      margin-top: 22px;
+      color: var(--orange);
+      font-weight: 800;
+    }
+
+    .message {
+      margin-top: 18px;
+      color: var(--muted);
+    }
+
+    .error-text {
+      color: var(--error);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    footer {
+      padding: 30px 20px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: #666666;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 600px) {
+
+      .header-inner {
+        padding: 14px 0;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      main {
+        padding-top: 60px;
+      }
+
+      .card {
+        padding: 24px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <div class="header-inner">
+
+      <a
+        href="/"
+        class="brand"
+      >
+        TIKIZIA GAMES
+      </a>
+
+      <a
+        href="/"
+        class="home-link"
+      >
+        ← Back to Tikizia Games
+      </a>
+
+    </div>
+
+    <div class="cr-stripe">
+      <div class="blue"></div>
+      <div class="white"></div>
+      <div class="red"></div>
+      <div class="white"></div>
+      <div class="blue"></div>
+    </div>
+
+  </header>
+
+  <main>
+
+    <p class="kicker">
+      CONOCHE? · ACCOUNT SECURITY
+    </p>
+
+    <h1 id="page-title">
+      One moment…
+    </h1>
+
+    <p
+      class="subtitle"
+      id="page-subtitle"
+    >
+      We're securely processing your account request.
+    </p>
+
+    <div class="card">
+
+      <div
+        class="status-icon"
+        id="status-icon"
+      >
+        …
+      </div>
+
+      <h2 id="card-title">
+        Checking your request
+      </h2>
+
+      <p id="card-message">
+        This should only take a moment.
+      </p>
+
+      <form
+        id="password-form"
+        class="hidden"
+      >
+
+        <p>
+          Account:
+          <span
+            class="email"
+            id="account-email"
+          ></span>
+        </p>
+
+        <div class="form-group">
+
+          <label for="new-password">
+            New password
+          </label>
+
+          <input
+            id="new-password"
+            type="password"
+            minlength="6"
+            autocomplete="new-password"
+            required
+          >
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="confirm-password">
+            Confirm new password
+          </label>
+
+          <input
+            id="confirm-password"
+            type="password"
+            minlength="6"
+            autocomplete="new-password"
+            required
+          >
+
+        </div>
+
+        <button
+          type="submit"
+          class="button"
+          id="password-button"
+        >
+          Update password
+        </button>
+
+        <p
+          id="form-error"
+          class="message error-text hidden"
+        ></p>
+
+      </form>
+
+      <a
+        href="/"
+        class="secondary-link hidden"
+        id="home-button"
+      >
+        Back to Tikizia Games
+      </a>
+
+      <a
+        href="#"
+        class="secondary-link hidden"
+        id="continue-button"
+      >
+        Continue
+      </a>
+
+    </div>
+
+  </main>
+
+  <footer>
+    © 2026 Tikizia Games · Made in Costa Rica 🇨🇷
+  </footer>
+
+  <script type="module">
+
+    import {
+      initializeApp
+    } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
+
+    import {
+      getAuth,
+      applyActionCode,
+      checkActionCode,
+      verifyPasswordResetCode,
+      confirmPasswordReset
+    } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js";
+
+    const params =
+      new URLSearchParams(
+        window.location.search
+      );
+
+    const mode =
+      params.get("mode");
+
+    const actionCode =
+      params.get("oobCode");
+
+    const apiKey =
+      params.get("apiKey");
+
+    const continueUrl =
+      params.get("continueUrl");
+
+    const lang =
+      params.get("lang") || "en";
+
+    const isSpanish =
+      lang.toLowerCase().startsWith("es");
+
+    const pageTitle =
+      document.getElementById("page-title");
+
+    const pageSubtitle =
+      document.getElementById("page-subtitle");
+
+    const statusIcon =
+      document.getElementById("status-icon");
+
+    const cardTitle =
+      document.getElementById("card-title");
+
+    const cardMessage =
+      document.getElementById("card-message");
+
+    const passwordForm =
+      document.getElementById("password-form");
+
+    const accountEmail =
+      document.getElementById("account-email");
+
+    const newPassword =
+      document.getElementById("new-password");
+
+    const confirmPassword =
+      document.getElementById("confirm-password");
+
+    const passwordButton =
+      document.getElementById("password-button");
+
+    const formError =
+      document.getElementById("form-error");
+
+    const homeButton =
+      document.getElementById("home-button");
+
+    const continueButton =
+      document.getElementById("continue-button");
+
+    function setStatus(
+      type,
+      title,
+      message
+    ) {
+
+      statusIcon.classList.remove(
+        "success",
+        "error"
+      );
+
+      if (type === "success") {
+
+        statusIcon.classList.add(
+          "success"
+        );
+
+        statusIcon.textContent = "✓";
+
+      }
+      else if (type === "error") {
+
+        statusIcon.classList.add(
+          "error"
+        );
+
+        statusIcon.textContent = "!";
+
+      }
+      else {
+
+        statusIcon.textContent = "…";
+
+      }
+
+      cardTitle.textContent =
+        title;
+
+      cardMessage.textContent =
+        message;
+
+    }
+
+    function showHomeButton() {
+
+      homeButton.classList.remove(
+        "hidden"
+      );
+
+    }
+
+    function safeContinueUrl() {
+
+      if (!continueUrl) {
+        return null;
+      }
+
+      try {
+
+        const url =
+          new URL(continueUrl);
+
+        const allowedHosts =
+          new Set([
+            "tikiziagames.com",
+            "www.tikiziagames.com"
+          ]);
+
+        if (
+          url.protocol === "https:" &&
+          allowedHosts.has(url.hostname)
+        ) {
+          return url.href;
+        }
+
+      }
+      catch (_) {
+        return null;
+      }
+
+      return null;
+
+    }
+
+    function showContinueButton() {
+
+      const safeUrl =
+        safeContinueUrl();
+
+      if (!safeUrl) {
+        return;
+      }
+
+      continueButton.href =
+        safeUrl;
+
+      continueButton.classList.remove(
+        "hidden"
+      );
+
+    }
+
+    function showInvalidRequest() {
+
+      pageTitle.textContent =
+        isSpanish
+          ? "Enlace no válido"
+          : "Invalid link";
+
+      pageSubtitle.textContent =
+        isSpanish
+          ? "No pudimos completar esta solicitud."
+          : "We couldn't complete this request.";
+
+      setStatus(
+        "error",
+        isSpanish
+          ? "El enlace no es válido o ya venció"
+          : "This link is invalid or expired",
+        isSpanish
+          ? "Volvé a Conoche? e intentá solicitar un nuevo enlace."
+          : "Return to Conoche? and request a new link."
+      );
+
+      showHomeButton();
+
+    }
+
+    if (
+      !mode ||
+      !actionCode ||
+      !apiKey
+    ) {
+
+      showInvalidRequest();
+
+    }
+    else {
+
+      const app =
+        initializeApp({
+          apiKey
+        });
+
+      const auth =
+        getAuth(app);
+
+      handleAction();
+
+      async function handleAction() {
+
+        try {
+
+          switch (mode) {
+
+            case "verifyEmail":
+              await handleVerifyEmail();
+              break;
+
+            case "resetPassword":
+              await handleResetPassword();
+              break;
+
+            case "recoverEmail":
+              await handleRecoverEmail();
+              break;
+
+            case "verifyAndChangeEmail":
+              await handleVerifyAndChangeEmail();
+              break;
+
+            default:
+              showInvalidRequest();
+
+          }
+
+        }
+        catch (error) {
+
+          console.error(
+            "Conoche auth action error:",
+            error
+          );
+
+          showInvalidRequest();
+
+        }
+
+      }
+
+      async function handleVerifyEmail() {
+
+        pageTitle.textContent =
+          isSpanish
+            ? "Verificando tu correo"
+            : "Verifying your email";
+
+        pageSubtitle.textContent =
+          isSpanish
+            ? "Estamos confirmando tu dirección para Conoche?."
+            : "We're confirming your address for Conoche?.";
+
+        await applyActionCode(
+          auth,
+          actionCode
+        );
+
+        setStatus(
+          "success",
+          isSpanish
+            ? "Correo verificado"
+            : "Email verified",
+          isSpanish
+            ? "Tu correo quedó verificado. Ya podés volver a Conoche?."
+            : "Your email is verified. You can return to Conoche?."
+        );
+
+        showContinueButton();
+        showHomeButton();
+
+      }
+
+      async function handleResetPassword() {
+
+        pageTitle.textContent =
+          isSpanish
+            ? "Restablecer contraseña"
+            : "Reset your password";
+
+        pageSubtitle.textContent =
+          isSpanish
+            ? "Elegí una nueva contraseña para tu cuenta de Conoche?."
+            : "Choose a new password for your Conoche? account.";
+
+        const email =
+          await verifyPasswordResetCode(
+            auth,
+            actionCode
+          );
+
+        accountEmail.textContent =
+          email;
+
+        setStatus(
+          "loading",
+          isSpanish
+            ? "Creá una nueva contraseña"
+            : "Create a new password",
+          isSpanish
+            ? "Usá una contraseña que no compartás con otras personas."
+            : "Use a password you don't share with anyone else."
+        );
+
+        passwordForm.classList.remove(
+          "hidden"
+        );
+
+        passwordForm.addEventListener(
+          "submit",
+          async (event) => {
+
+            event.preventDefault();
+
+            formError.classList.add(
+              "hidden"
+            );
+
+            if (
+              newPassword.value !==
+              confirmPassword.value
+            ) {
+
+              formError.textContent =
+                isSpanish
+                  ? "Las contraseñas no coinciden."
+                  : "The passwords do not match.";
+
+              formError.classList.remove(
+                "hidden"
+              );
+
+              return;
+
+            }
+
+            if (
+              newPassword.value.length < 6
+            ) {
+
+              formError.textContent =
+                isSpanish
+                  ? "La contraseña debe tener al menos 6 caracteres."
+                  : "The password must contain at least 6 characters.";
+
+              formError.classList.remove(
+                "hidden"
+              );
+
+              return;
+
+            }
+
+            passwordButton.disabled =
+              true;
+
+            try {
+
+              await confirmPasswordReset(
+                auth,
+                actionCode,
+                newPassword.value
+              );
+
+              passwordForm.classList.add(
+                "hidden"
+              );
+
+              setStatus(
+                "success",
+                isSpanish
+                  ? "Contraseña actualizada"
+                  : "Password updated",
+                isSpanish
+                  ? "Tu nueva contraseña quedó guardada. Ya podés volver a Conoche?."
+                  : "Your new password has been saved. You can return to Conoche?."
+              );
+
+              showContinueButton();
+              showHomeButton();
+
+            }
+            catch (error) {
+
+              console.error(
+                "Password reset error:",
+                error
+              );
+
+              passwordButton.disabled =
+                false;
+
+              formError.textContent =
+                isSpanish
+                  ? "No pudimos guardar la contraseña. El enlace puede haber vencido o la contraseña no cumple los requisitos."
+                  : "We couldn't save the password. The link may have expired or the password may not meet the requirements.";
+
+              formError.classList.remove(
+                "hidden"
+              );
+
+            }
+
+          }
+        );
+
+      }
+
+      async function handleRecoverEmail() {
+
+        pageTitle.textContent =
+          isSpanish
+            ? "Recuperando tu correo"
+            : "Recovering your email";
+
+        pageSubtitle.textContent =
+          isSpanish
+            ? "Estamos protegiendo tu cuenta de Conoche?."
+            : "We're protecting your Conoche? account.";
+
+        const info =
+          await checkActionCode(
+            auth,
+            actionCode
+          );
+
+        const restoredEmail =
+          info.data.email || "";
+
+        await applyActionCode(
+          auth,
+          actionCode
+        );
+
+        setStatus(
+          "success",
+          isSpanish
+            ? "Correo recuperado"
+            : "Email recovered",
+          restoredEmail
+            ? (
+              isSpanish
+                ? `La cuenta volvió a usar ${restoredEmail}.`
+                : `The account has been restored to ${restoredEmail}.`
+            )
+            : (
+              isSpanish
+                ? "El cambio de correo fue revertido correctamente."
+                : "The email change was successfully reverted."
+            )
+        );
+
+        showHomeButton();
+
+      }
+
+      async function handleVerifyAndChangeEmail() {
+
+        pageTitle.textContent =
+          isSpanish
+            ? "Confirmando tu nuevo correo"
+            : "Confirming your new email";
+
+        pageSubtitle.textContent =
+          isSpanish
+            ? "Estamos actualizando tu cuenta de Conoche?."
+            : "We're updating your Conoche? account.";
+
+        await applyActionCode(
+          auth,
+          actionCode
+        );
+
+        setStatus(
+          "success",
+          isSpanish
+            ? "Nuevo correo confirmado"
+            : "New email confirmed",
+          isSpanish
+            ? "La dirección de correo de tu cuenta fue actualizada correctamente."
+            : "Your account email address was updated successfully."
+        );
+
+        showContinueButton();
+        showHomeButton();
+
+      }
+
+    }
+
+  </script>
+
+</body>
+
+</html>
