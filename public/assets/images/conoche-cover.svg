@@ -1,0 +1,17 @@
+<svg width="800" height="520" viewBox="0 0 800 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="520" rx="36" fill="#1A0D16"/>
+  <rect x="0" y="0" width="800" height="520" rx="36" fill="url(#paint0_linear)"/>
+  <circle cx="170" cy="120" r="120" fill="#FF5D9E" fill-opacity="0.16"/>
+  <circle cx="660" cy="410" r="150" fill="#FF8A65" fill-opacity="0.18"/>
+  <text x="60" y="110" fill="#FF8CB8" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="4">COUPLES GAME</text>
+  <text x="60" y="220" fill="white" font-family="Arial, sans-serif" font-size="82" font-weight="900">CONOCHE</text>
+  <text x="60" y="285" fill="#FFD4E5" font-family="Arial, sans-serif" font-size="34" font-weight="700">¿Qué tanto conocés a tu pareja?</text>
+  <text x="60" y="360" fill="white" font-family="Arial, sans-serif" font-size="72">❤️</text>
+  <text x="130" y="360" fill="#FFC1D6" font-family="Arial, sans-serif" font-size="30" font-weight="700">Connection • Curiosity • Chemistry</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="800" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2B1021"/>
+      <stop offset="1" stop-color="#140B14"/>
+    </linearGradient>
+  </defs>
+</svg>

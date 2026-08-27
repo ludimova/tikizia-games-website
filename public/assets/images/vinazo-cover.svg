@@ -1,0 +1,17 @@
+<svg width="800" height="520" viewBox="0 0 800 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="520" rx="36" fill="#1A0F09"/>
+  <rect x="0" y="0" width="800" height="520" rx="36" fill="url(#paint0_linear)"/>
+  <circle cx="140" cy="110" r="110" fill="#FF9A3E" fill-opacity="0.17"/>
+  <circle cx="670" cy="400" r="160" fill="#D15600" fill-opacity="0.22"/>
+  <text x="60" y="110" fill="#FFB46A" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="4">FRIENDS • SOCIAL</text>
+  <text x="60" y="220" fill="white" font-family="Arial, sans-serif" font-size="82" font-weight="900">VINAZO</text>
+  <text x="60" y="285" fill="#FFD6B0" font-family="Arial, sans-serif" font-size="34" font-weight="700">Todos tenemos uno.</text>
+  <text x="60" y="360" fill="white" font-family="Arial, sans-serif" font-size="72">🍷</text>
+  <text x="130" y="360" fill="#FFD1A2" font-family="Arial, sans-serif" font-size="30" font-weight="700">Stories • Nostalgia • Vacilón</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="800" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2A170C"/>
+      <stop offset="1" stop-color="#120C09"/>
+    </linearGradient>
+  </defs>
+</svg>
