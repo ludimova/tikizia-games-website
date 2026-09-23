@@ -33,10 +33,19 @@
 </head>
 <body>
   <main>
-    <h1>Volvé a Conoche?</h1>
-    <p>Si la app no se abrió, buscá Conoche? en tu celular y entrá con tu correo y la nueva contraseña.</p>
-    <p>Si todavía no abre desde el enlace, actualizá la app. No tenés que volver a cambiar la contraseña.</p>
-    <a href="https://play.google.com/store/apps/details?id=com.tikiziagames.conoche">Ver Conoche? en Google Play</a>
+    <h1 id="title">Volvé a Conoche?</h1>
+    <p id="instruction">Si la app no se abrió, buscá Conoche? en tu celular y entrá con tu correo y la nueva contraseña.</p>
+    <p id="update">Si todavía no abre desde el enlace, actualizá la app. No tenés que volver a cambiar la contraseña.</p>
+    <a id="store" href="https://play.google.com/store/apps/details?id=com.tikiziagames.conoche">Ver Conoche? en Google Play</a>
   </main>
+  <script>
+    if (!navigator.language.toLowerCase().startsWith('es')) {
+      document.documentElement.lang = 'en';
+      document.getElementById('title').textContent = 'Return to Conoche?';
+      document.getElementById('instruction').textContent = 'If the app did not open, find Conoche? on your phone and sign in with your email and new password.';
+      document.getElementById('update').textContent = 'If the link still does not open the app, update it. You do not need to reset your password again.';
+      document.getElementById('store').textContent = 'View Conoche? on Google Play';
+    }
+  </script>
 </body>
 </html>
