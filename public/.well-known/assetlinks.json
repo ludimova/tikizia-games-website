@@ -1,0 +1,15 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.tikiziagames.conoche",
+      "sha256_cert_fingerprints": [
+        "CD:C4:8F:19:0F:EC:FE:55:15:7B:70:04:E4:29:35:6F:2C:F5:2A:57:1C:68:50:3A:A4:13:88:6E:ED:CC:F7:02",
+        "99:D0:10:6E:D1:F0:6E:22:D6:44:03:58:1E:A2:9F:B6:19:76:81:16:CA:D7:0F:18:DD:44:20:8F:39:9F:49:55",
+        "2C:1E:BB:AB:4D:79:23:18:A5:46:01:E2:27:F6:0E:72:10:BB:46:18:50:AD:5E:33:1C:9B:2E:09:E7:D8:21:43",
+        "4C:A6:7E:10:03:9D:B9:6A:51:C2:70:45:09:B9:8B:96:8A:77:FA:2E:31:94:A7:40:C9:7C:FD:0D:35:25:A1:41"
+      ]
+    }
+  }
+]

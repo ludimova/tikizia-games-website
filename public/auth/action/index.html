@@ -438,8 +438,8 @@
 
       </form>
 
-      <a href="/" class="secondary-link hidden" id="home-button">
-        Back to Tikizia Games
+      <a href="/abrir-conoche" class="button hidden" id="home-button">
+        Open Conoche?
       </a>
 
       <a
@@ -528,7 +528,7 @@
           "new-password-label": "Nueva contraseña",
           "confirm-password-label": "Confirmá la contraseña",
           "password-button": "Guardar contraseña",
-          "home-button": "Volver a Tikizia Games",
+          "home-button": "Abrir Conoche?",
           "continue-button": "Continuar",
           "site-footer": "© 2026 Tikizia Games · Hecho en Costa Rica 🇨🇷"
         }
@@ -575,6 +575,17 @@
 
     const homeButton =
       document.getElementById("home-button");
+
+    // A user tap from Gmail's browser must be able to launch the installed
+    // Android app. The fallback is a safe web page, never an account code.
+    if (/Android/i.test(navigator.userAgent)) {
+      homeButton.href =
+        "intent://tikiziagames.com/abrir-conoche" +
+        "#Intent;scheme=https;package=com.tikiziagames.conoche;" +
+        "S.browser_fallback_url=" +
+        encodeURIComponent("https://tikiziagames.com/abrir-conoche") +
+        ";end";
+    }
 
     const continueButton =
       document.getElementById("continue-button");
