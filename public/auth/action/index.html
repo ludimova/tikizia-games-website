@@ -5,6 +5,8 @@
 
   <meta charset="UTF-8">
 
+  <meta name="referrer" content="no-referrer">
+
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
@@ -19,35 +21,19 @@
     content="Complete your Conoche? account action securely through Tikizia Games."
   >
 
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Permanent+Marker&display=swap"
-    rel="stylesheet"
-  >
-
   <style>
 
     :root {
-      --background: #050505;
-      --card: #101010;
-      --text: #f5f5f5;
-      --muted: #aaaaaa;
-      --orange: #ff6a00;
-      --orange-light: #ff8f2a;
-      --success: #62d889;
-      --error: #ff6b6b;
-      --border: rgba(255, 255, 255, 0.09);
-      --max-width: 760px;
+      --background: #fff8ec;
+      --card: #fffcf5;
+      --text: #14345f;
+      --muted: #595d62;
+      --red: #d62e3a;
+      --red-deep: #b52433;
+      --success: #427a48;
+      --error: #b6323d;
+      --border: #ddcbb6;
+      --max-width: 680px;
     }
 
     * {
@@ -59,14 +45,14 @@
       min-height: 100vh;
       background:
         radial-gradient(
-          circle at 50% -10%,
-          rgba(255, 106, 0, 0.14),
-          transparent 35%
+          circle at 100% 0,
+          rgba(214, 46, 58, 0.055),
+          transparent 36%
         ),
         var(--background);
       color: var(--text);
-      font-family: "Inter", Arial, sans-serif;
-      line-height: 1.65;
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      line-height: 1.55;
     }
 
     a {
@@ -75,13 +61,13 @@
     }
 
     .site-header {
-      background: rgba(5, 5, 5, 0.94);
+      background: rgba(255, 252, 245, 0.92);
       border-bottom: 1px solid var(--border);
     }
 
     .header-inner {
       width: min(calc(100% - 40px), var(--max-width));
-      min-height: 74px;
+      min-height: 72px;
       margin: auto;
       display: flex;
       align-items: center;
@@ -90,20 +76,35 @@
     }
 
     .brand {
-      color: var(--orange);
-      font-family: "Permanent Marker", cursive;
-      font-size: 1.4rem;
+      color: var(--text);
+      font-family: Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      white-space: nowrap;
+    }
+
+    .brand-pre {
+      color: #be8b2f;
+      font-size: 0.65em;
+      font-style: italic;
+      font-weight: 400;
+      margin-right: 0.16em;
+    }
+
+    .brand-punct {
+      color: var(--red);
     }
 
     .home-link {
-      color: #cccccc;
+      color: var(--text);
       font-size: 0.88rem;
       font-weight: 700;
     }
 
     .cr-stripe {
       width: 100%;
-      height: 6px;
+      height: 3px;
       display: grid;
       grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
     }
@@ -123,27 +124,28 @@
     main {
       width: min(calc(100% - 40px), var(--max-width));
       margin: auto;
-      padding: 80px 0 100px;
+      padding: clamp(44px, 8vw, 76px) 0 88px;
     }
 
     .kicker {
       margin: 0 0 10px;
-      color: var(--orange);
-      font-size: 0.75rem;
+      color: var(--red-deep);
+      font-size: 0.72rem;
       font-weight: 800;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.13em;
     }
 
     h1 {
       margin: 0 0 16px;
-      font-size: clamp(2.8rem, 8vw, 5rem);
-      line-height: 1;
-      letter-spacing: -0.05em;
+      font-family: Georgia, serif;
+      font-size: clamp(2.35rem, 7vw, 4rem);
+      line-height: 1.1;
+      letter-spacing: -0.045em;
     }
 
     .subtitle {
       max-width: 620px;
-      margin: 0 0 38px;
+      margin: 0 0 30px;
       color: var(--muted);
     }
 
@@ -151,36 +153,37 @@
       padding: 32px;
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 24px;
+      border-radius: 22px;
+      box-shadow: 0 14px 36px rgba(68, 38, 20, 0.055);
     }
 
     .status-icon {
-      width: 52px;
-      height: 52px;
-      margin-bottom: 22px;
+      width: 46px;
+      height: 46px;
+      margin-bottom: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      background: rgba(255, 106, 0, 0.12);
-      color: var(--orange);
+      background: rgba(214, 46, 58, 0.085);
+      color: var(--red);
       font-size: 1.5rem;
       font-weight: 900;
     }
 
     .status-icon.success {
-      background: rgba(98, 216, 137, 0.12);
+      background: rgba(66, 122, 72, 0.1);
       color: var(--success);
     }
 
     .status-icon.error {
-      background: rgba(255, 107, 107, 0.12);
+      background: rgba(182, 50, 61, 0.1);
       color: var(--error);
     }
 
     h2 {
       margin: 0 0 12px;
-      font-size: 1.8rem;
+      font-size: clamp(1.3rem, 5vw, 1.7rem);
       letter-spacing: -0.03em;
     }
 
@@ -189,7 +192,7 @@
     }
 
     .email {
-      color: #ffffff;
+      color: var(--text);
       font-weight: 700;
       word-break: break-word;
     }
@@ -201,7 +204,7 @@
     label {
       display: block;
       margin-bottom: 8px;
-      color: #dddddd;
+      color: var(--text);
       font-size: 0.88rem;
       font-weight: 700;
     }
@@ -210,16 +213,17 @@
       width: 100%;
       min-height: 52px;
       padding: 0 16px;
-      background: #080808;
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: #ffffff;
+      color: var(--text);
+      border: 1px solid var(--border);
       border-radius: 12px;
       font: inherit;
       outline: none;
     }
 
     input:focus {
-      border-color: var(--orange);
+      border-color: var(--red);
+      box-shadow: 0 0 0 3px rgba(214, 46, 58, 0.12);
     }
 
     .button {
@@ -231,16 +235,21 @@
       justify-content: center;
       border: 0;
       border-radius: 999px;
-      background:
-        linear-gradient(
-          135deg,
-          var(--orange),
-          var(--orange-light)
-        );
-      color: #111111;
+      background: var(--red);
+      color: #ffffff;
       font: inherit;
       font-weight: 800;
       cursor: pointer;
+    }
+
+    .button:hover {
+      background: var(--red-deep);
+    }
+
+    .button:focus-visible,
+    a:focus-visible {
+      outline: 3px solid var(--red);
+      outline-offset: 3px;
     }
 
     .button:disabled {
@@ -251,7 +260,7 @@
     .secondary-link {
       display: inline-block;
       margin-top: 22px;
-      color: var(--orange);
+      color: var(--red-deep);
       font-weight: 800;
     }
 
@@ -272,7 +281,7 @@
       padding: 30px 20px;
       border-top: 1px solid var(--border);
       text-align: center;
-      color: #666666;
+      color: var(--muted);
       font-size: 0.8rem;
     }
 
@@ -280,16 +289,19 @@
 
       .header-inner {
         padding: 14px 0;
-        flex-direction: column;
-        align-items: flex-start;
+        min-height: 68px;
       }
 
       main {
-        padding-top: 60px;
+        padding-top: 48px;
       }
 
       .card {
-        padding: 24px;
+        padding: 24px 20px;
+      }
+
+      .home-link {
+        font-size: 0.8rem;
       }
 
     }
@@ -307,13 +319,15 @@
       <a
         href="/"
         class="brand"
+        aria-label="Me Conoche?"
       >
-        TIKIZIA GAMES
+        <span class="brand-pre">Me</span>Conoche<span class="brand-punct">?</span>
       </a>
 
       <a
         href="/"
         class="home-link"
+        id="header-home-link"
       >
         ← Back to Tikizia Games
       </a>
@@ -332,7 +346,7 @@
 
   <main>
 
-    <p class="kicker">
+    <p class="kicker" id="kicker">
       CONOCHE? · ACCOUNT SECURITY
     </p>
 
@@ -370,7 +384,7 @@
       >
 
         <p>
-          Account:
+          <span id="account-label">Account:</span>
           <span
             class="email"
             id="account-email"
@@ -379,7 +393,7 @@
 
         <div class="form-group">
 
-          <label for="new-password">
+          <label for="new-password" id="new-password-label">
             New password
           </label>
 
@@ -395,7 +409,7 @@
 
         <div class="form-group">
 
-          <label for="confirm-password">
+          <label for="confirm-password" id="confirm-password-label">
             Confirm new password
           </label>
 
@@ -424,11 +438,7 @@
 
       </form>
 
-      <a
-        href="/"
-        class="secondary-link hidden"
-        id="home-button"
-      >
+      <a href="/" class="secondary-link hidden" id="home-button">
         Back to Tikizia Games
       </a>
 
@@ -444,7 +454,7 @@
 
   </main>
 
-  <footer>
+  <footer id="site-footer">
     © 2026 Tikizia Games · Made in Costa Rica 🇨🇷
   </footer>
 
@@ -476,14 +486,59 @@
     const apiKey =
       params.get("apiKey");
 
+    // The API key is public, but actions on this page must belong to Conoche?.
+    const expectedApiKey =
+      "AIzaSyCu_gIBlboJ8D6Vr7bq7-j1vNPosUnu-og";
+
     const continueUrl =
       params.get("continueUrl");
 
+    // Keep one-time account codes out of browser history and screenshots.
+    if (params.has("oobCode")) {
+      window.history.replaceState(
+        null,
+        "",
+        window.location.pathname
+      );
+    }
+
     const lang =
-      params.get("lang") || "en";
+      params.get("lang") || navigator.language || "en";
 
     const isSpanish =
       lang.toLowerCase().startsWith("es");
+
+    document.documentElement.lang =
+      isSpanish ? "es" : "en";
+
+    document.title =
+      isSpanish
+        ? "Seguridad de la cuenta | Conoche?"
+        : "Account security | Conoche?";
+
+    const staticCopy = isSpanish
+      ? {
+          "header-home-link": "← Tikizia Games",
+          kicker: "CONOCHE? · SEGURIDAD DE LA CUENTA",
+          "page-title": "Un momento…",
+          "page-subtitle": "Estamos revisando tu solicitud de forma segura.",
+          "card-title": "Revisando el enlace",
+          "card-message": "Esto tarda solo un momento.",
+          "account-label": "Cuenta:",
+          "new-password-label": "Nueva contraseña",
+          "confirm-password-label": "Confirmá la contraseña",
+          "password-button": "Guardar contraseña",
+          "home-button": "Volver a Tikizia Games",
+          "continue-button": "Continuar",
+          "site-footer": "© 2026 Tikizia Games · Hecho en Costa Rica 🇨🇷"
+        }
+      : null;
+
+    if (staticCopy) {
+      for (const [id, value] of Object.entries(staticCopy)) {
+        document.getElementById(id).textContent = value;
+      }
+    }
 
     const pageTitle =
       document.getElementById("page-title");
@@ -655,7 +710,7 @@
     if (
       !mode ||
       !actionCode ||
-      !apiKey
+      apiKey !== expectedApiKey
     ) {
 
       showInvalidRequest();
@@ -702,11 +757,6 @@
 
         }
         catch (error) {
-
-          console.error(
-            "Conoche auth action error:",
-            error
-          );
 
           showInvalidRequest();
 
@@ -855,12 +905,7 @@
               showHomeButton();
 
             }
-            catch (error) {
-
-              console.error(
-                "Password reset error:",
-                error
-              );
+            catch (_) {
 
               passwordButton.disabled =
                 false;
