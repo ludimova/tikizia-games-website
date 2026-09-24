@@ -43,6 +43,18 @@ that report's existing app/help/legal route mapping remains valid.
 
 ## Browser and publication
 
-Pending branch-preview visual verification and production verification.
 Local browser preview was blocked by the browser client; use the existing
 Cloudflare Git preview instead, without weakening any browser protection.
+
+- Preview `311904e7.tikizia-games-website.pages.dev`: restored orange wordmark,
+  dark studio homepage and three game cards visually inspected on desktop.
+- Homepage checked at 320, 390, 768 and 1366 px: document width does not exceed
+  the available viewport. The mobile language selector was then moved beside
+  the studio name so it does not add an unnecessary navigation row.
+- Actual Spanish and English Conoche card navigation passed; each opens the
+  matching app landing page. The app header returns to the studio homepage.
+- Keyboard activation opens both a studio FAQ and the Conoche card. Conoche
+  FAQ navigation and language switching work; searching “doodle” yields two
+  answers in English and switching language restores the full Spanish FAQ.
+- GitHub validation and Cloudflare preview deployment both passed.
+- Production promotion and final deployed-file comparison: pending.

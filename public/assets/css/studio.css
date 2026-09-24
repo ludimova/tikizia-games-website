@@ -22,6 +22,6 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--orange);outline-of
 .faq-item a{color:var(--orange);text-decoration:underline;text-underline-offset:4px}
 .footer-brand .operator-text,.footer-bottom{color:#999}
 .footer-app-label{width:100%;text-align:right;font-weight:700;font-size:.8rem;color:#ddd;margin-top:14px}
-@media(max-width:700px){html{scroll-padding-top:180px}.nav{gap:8px}.nav-menu{gap:4px 14px}.footer-app-label{text-align:left}}
+@media(max-width:700px){html{scroll-padding-top:140px}.nav{gap:8px;position:relative}.nav-menu{gap:4px 14px}.nav-menu .studio-language{position:absolute;right:0;top:10px;min-width:36px;min-height:36px;font-size:.72rem}.footer-app-label{text-align:left}}
 @media(max-width:360px){.hero-title{font-size:19vw}.nav-menu{gap:2px 12px}.support-card{padding:24px}.support-link{font-size:.9rem}.game-showcase-body{padding:24px 20px}.footer-links{gap:14px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}.game-showcase-card:hover,.button:hover{transform:none}}
