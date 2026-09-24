@@ -92,17 +92,17 @@ test('deletion entry point is a real email request, not a fake form or reinstall
   }
 });
 
-test('account verification, password recovery and Android App Links remain byte-for-byte intact',async()=>{
+test('account verification, recovery and Android App Links are unchanged apart from checkout line endings',async()=>{
   const protectedFiles={
-    'auth/action/index.html':'d682e68f09667c272842aa29c27472458d7c24556e82f772473dc74333d19543',
+    'auth/action/index.html':'da765c1600e254d82d5d0c303494a9150576679d645c70bd9c169f55afc434a3',
     'abrir-conoche/index.html':'7c7e518aa83601bfe1bff18bef1d949d5973a017e3523b7da963803e2a7d5781',
     '.well-known/assetlinks.json':'3cc4ac9f6720f2ad949db1bfabeecf0ff531785cda7f2c4ae5ab57a4b398d934',
   };
-  // Git can check files out with CRLF on Windows. Compare both line endings.
+  // Hash the original f1c6f18 Git blobs after LF normalization, not a local
+  // checkout containing mixed CRLF/LF. This must also work on Linux CI.
   for(const [file,expected] of Object.entries(protectedFiles)) {
-    const text=await read(file);
-    const variants=[text,text.replace(/\r?\n/g,'\r\n'),text.replace(/\r\n/g,'\n')];
-    assert.ok(variants.some(s=>createHash('sha256').update(s).digest('hex')===expected),`Protected route changed: ${file}`);
+    const text=(await read(file)).replace(/\r\n/g,'\n');
+    assert.equal(createHash('sha256').update(text).digest('hex'),expected,`Protected route changed: ${file}`);
   }
   const links=JSON.parse(await read('.well-known/assetlinks.json'));
   assert.ok(links.some(l=>l.target.package_name==='com.tikiziagames.conoche'));
