@@ -3,6 +3,7 @@
 import {readFile, writeFile, mkdir} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import path from 'node:path';
+import {studioHome} from './studio-home.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const app = JSON.parse(await readFile(path.join(root, 'content/conoche-app.json'), 'utf8'));
@@ -163,7 +164,7 @@ function contact(lang) {
 const ids=['','conoche','faq','support','contact','download','privacy','terms','community-guidelines','delete-account','child-safety'];
 for (const lang of ['es','en']) {
   for (const id of ids) {
-    const html = id==='' || id==='conoche' ? home(lang,id==='conoche') : id==='faq' ? faq(lang) : id==='support' ? support(lang) : id==='contact' ? contact(lang) : id==='download' ? download(lang) : id==='delete-account' ? deletion(lang) : id==='child-safety' ? safety(lang) : legal(id,lang);
+    const html = id==='' ? studioHome(lang) : id==='conoche' ? home(lang,true) : id==='faq' ? faq(lang) : id==='support' ? support(lang) : id==='contact' ? contact(lang) : id==='download' ? download(lang) : id==='delete-account' ? deletion(lang) : id==='child-safety' ? safety(lang) : legal(id,lang);
     const directory = path.join(root,'public',route(id,lang));
     await mkdir(directory,{recursive:true});
     await writeFile(path.join(directory,'index.html'),html);

@@ -122,3 +122,35 @@ test('old homepage support, FAQ, contact and deletion bookmarks still have visib
   const home=await read('index.html');
   for(const id of ['games','about','support','faq','contact','delete-account'])assert.ok(home.includes(`id="${id}"`),id);
 });
+
+test('the studio owns the homepage; Conoche is one game, not the company identity',async()=>{
+  for(const prefix of ['', 'en/']) {
+    const source=await read(`${prefix}index.html`);
+    assert.match(source,/<body class="studio-home">/);
+    assert.match(source,/<h1 class="hero-title">\s*TIKIZIA\s*<span>GAMES<\/span>/);
+    assert.match(source,/class="cr-stripe"/);
+    assert.match(source,/href="\/assets\/css\/styles.css/);
+    assert.doesNotMatch(source,/href="\/assets\/css\/site.css/);
+    assert.equal((source.match(/class="game-showcase-card"/g)||[]).length,3);
+    assert.match(source,/>Vinazo<\/h3>/);
+    assert.match(source,new RegExp(`class="game-showcase-link" href="/${prefix}conoche/"`));
+    assert.doesNotMatch(source,/class="hero-art"|data-faq>|topic-purchases|apps\/internaltest/);
+    const graph=JSON.parse(source.match(/<script type="application\/ld\+json">([^<]+)<\/script>/)[1]);
+    assert.equal(graph['@type'],'Organization');
+    assert.equal(graph.name,'Tikizia Games');
+    assert.match(source,/og:image" content="https:\/\/tikiziagames.com\/assets\/images\/tikizia-studio.svg/);
+  }
+});
+
+test('Conoche keeps its own presentation, help, policies and tester links',async()=>{
+  for(const prefix of ['', 'en/']) {
+    const source=await read(`${prefix}conoche/index.html`);
+    assert.match(source,/class="hero-art"/);
+    assert.match(source,/conoche-sloths.png/);
+    assert.match(source,/href="\/assets\/css\/site.css/);
+    for(const target of ['faq','support','privacy','terms','delete-account','download']) {
+      assert.ok(source.includes(`href="/${prefix}${target}/"`),`${prefix}conoche: missing ${target}`);
+    }
+    assert.match(source,new RegExp(`href="/${prefix}"`),'a visitor can return to the studio');
+  }
+});

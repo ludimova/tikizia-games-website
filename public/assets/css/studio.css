@@ -1,0 +1,27 @@
+/* Small additions to the original studio stylesheet. Never import Conoche's
+   site.css here: the studio and its games have separate visual identities. */
+@font-face{font-family:Inter;src:url('/assets/fonts/Inter-Variable.ttf') format('truetype');font-style:normal;font-weight:100 900;font-display:swap}
+@font-face{font-family:'Permanent Marker';src:url('/assets/fonts/PermanentMarker-Regular.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+html{scroll-padding-top:110px;color-scheme:dark}
+.studio-home{overflow-x:clip}
+.hero-title,.footer-logo{font-weight:400}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--orange);outline-offset:5px}
+.skip-link{position:fixed;left:16px;top:-100px;padding:12px 20px;background:var(--orange);color:#111;font-weight:800;z-index:200}
+.skip-link:focus{top:12px}
+.nav-menu{align-items:center}
+.nav-menu a{display:inline-flex;align-items:center;min-height:44px}
+.nav-menu .studio-language{border:1px solid var(--border);border-radius:50%;justify-content:center;min-width:44px}
+.game-showcase-link{display:flex;flex-direction:column;flex:1}
+.game-showcase-link:focus-visible{outline-offset:-4px}
+.game-showcase-link .game-showcase-body{display:flex;flex-direction:column}
+.conoche-cover{background:#fff8ec;object-fit:contain;padding:10px}
+.game-cta{display:flex;align-items:center;justify-content:space-between;color:var(--orange);font-weight:800;min-height:44px;margin-top:24px}
+.game-showcase-link:hover .game-cta{text-decoration:underline;text-underline-offset:5px}
+.game-status{display:inline-block;font-size:.8rem;color:#aaa;margin-top:24px}
+.support-icon{color:var(--orange);line-height:1}
+.faq-item a{color:var(--orange);text-decoration:underline;text-underline-offset:4px}
+.footer-brand .operator-text,.footer-bottom{color:#999}
+.footer-app-label{width:100%;text-align:right;font-weight:700;font-size:.8rem;color:#ddd;margin-top:14px}
+@media(max-width:700px){html{scroll-padding-top:180px}.nav{gap:8px}.nav-menu{gap:4px 14px}.footer-app-label{text-align:left}}
+@media(max-width:360px){.hero-title{font-size:19vw}.nav-menu{gap:2px 12px}.support-card{padding:24px}.support-link{font-size:.9rem}.game-showcase-body{padding:24px 20px}.footer-links{gap:14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}.game-showcase-card:hover,.button:hover{transform:none}}

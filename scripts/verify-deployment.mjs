@@ -11,6 +11,7 @@ assert.ok(hostname==='tikiziagames.com'||hostname.endsWith('.tikizia-games-websi
 const sitemap=await readFile(path.join(root,'sitemap.xml'),'utf8');
 const routes=[...sitemap.matchAll(/<loc>https:\/\/tikiziagames.com([^<]+)<\/loc>/g)].map(m=>m[1]);
 routes.push('/auth/action/','/abrir-conoche/','/.well-known/assetlinks.json','/robots.txt','/sitemap.xml','/assets/css/site.css','/assets/js/site.js','/assets/images/conoche-sloths.png','/assets/images/favicon.svg','/assets/fonts/Nunito-Variable.ttf','/assets/fonts/LilitaOne-Regular.ttf','/assets/fonts/GreatVibes-Regular.ttf');
+routes.push('/assets/css/styles.css','/assets/css/studio.css','/assets/images/tikizia-studio.svg','/assets/images/studio-favicon.svg','/assets/images/vinazo-cover.svg','/assets/images/under-construction-cover.svg','/assets/fonts/Inter-Variable.ttf','/assets/fonts/PermanentMarker-Regular.ttf');
 const digest=data=>createHash('sha256').update(data).digest('hex');
 // Cloudflare may consume these documented comments while keeping the public
 // support addresses intact. No other HTML transformations are accepted.
