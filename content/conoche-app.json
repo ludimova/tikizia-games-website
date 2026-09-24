@@ -1,0 +1,990 @@
+{
+  "source": "Conoche in-app help and legal copy",
+  "sections": [
+    {
+      "id": "start",
+      "es": "Cuenta y acceso",
+      "en": "Account and access"
+    },
+    {
+      "id": "connections",
+      "es": "Conexiones y seguridad",
+      "en": "Connections and safety"
+    },
+    {
+      "id": "questions",
+      "es": "Preguntas y apuestas",
+      "en": "Questions and guesses"
+    },
+    {
+      "id": "games",
+      "es": "Juegos",
+      "en": "Games"
+    },
+    {
+      "id": "creative",
+      "es": "Cosas que crean juntos",
+      "en": "Things you create together"
+    },
+    {
+      "id": "care",
+      "es": "Para hablar y escuchar",
+      "en": "Talking and listening"
+    },
+    {
+      "id": "moments",
+      "es": "Hoy y planes compartidos",
+      "en": "Today and shared plans"
+    },
+    {
+      "id": "privacy",
+      "es": "Tu privacidad",
+      "en": "Your privacy"
+    },
+    {
+      "id": "purchases",
+      "es": "Gratis y compras",
+      "en": "Free access and purchases"
+    },
+    {
+      "id": "support",
+      "es": "Soporte",
+      "en": "Support"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "invite",
+      "section": "start",
+      "es": {
+        "question": "¿Cómo empiezo con alguien?",
+        "answer": "Compartí una invitación. La conexión aparece cuando la otra persona la acepta; no se crea solo por buscarla."
+      },
+      "en": {
+        "question": "How do I start with someone?",
+        "answer": "Share an invitation. A connection starts when the other person accepts; searching for them does not connect you."
+      }
+    },
+    {
+      "id": "verify_email",
+      "section": "start",
+      "es": {
+        "question": "¿Por qué tengo que verificar mi correo?",
+        "answer": "Para confirmar que es tuyo. Abrí el enlace que te enviamos y volvé a la app. Si no llega, revisá spam o pedí otro."
+      },
+      "en": {
+        "question": "Why do I need to verify my email?",
+        "answer": "It confirms the address is yours. Open the link we sent, then return to the app. Check spam or request another link if needed."
+      }
+    },
+    {
+      "id": "password_reset",
+      "section": "start",
+      "es": {
+        "question": "¿Olvidaste tu contraseña?",
+        "answer": "En el inicio tocá “¿Olvidaste tu contraseña?”. Te enviamos un enlace al correo con el que creaste la cuenta."
+      },
+      "en": {
+        "question": "Forgot your password?",
+        "answer": "Tap “Forgot your password?” on the sign-in screen. We send a link to your account email."
+      }
+    },
+    {
+      "id": "google_sign_in",
+      "section": "start",
+      "es": {
+        "question": "¿No podés entrar con Google?",
+        "answer": "Comprobá que elegiste la misma cuenta de Google de tu perfil. Si falla, anotá el mensaje y contactá a soporte; no creés otra cuenta por accidente."
+      },
+      "en": {
+        "question": "Cannot sign in with Google?",
+        "answer": "Check that you chose the Google account linked to your profile. If it fails, note the message and contact support; avoid creating a second account by accident."
+      }
+    },
+    {
+      "id": "connection_hide",
+      "section": "connections",
+      "es": {
+        "question": "¿Quitar una conexión borra lo que jugamos?",
+        "answer": "No. “Quitar de mis conexiones” solo la oculta de tu lista. El historial sigue guardado y puede reaparecer si la buscás por alias."
+      },
+      "en": {
+        "question": "Does removing a connection delete our games?",
+        "answer": "No. Removing hides it from your list. Its history remains and may reappear if you search for the person by alias."
+      }
+    },
+    {
+      "id": "connection_history",
+      "section": "connections",
+      "es": {
+        "question": "¿Qué borra “Borrar rondas de 9 preguntas”?",
+        "answer": "Solo las rondas terminadas de 9 preguntas, para ambos. Conserva las rondas en curso, otros juegos, el chat y la Cajita. No reinicia el cupo gratis."
+      },
+      "en": {
+        "question": "What does deleting nine-question rounds remove?",
+        "answer": "Only completed nine-question rounds, for both people. Active rounds, other games, chat and saved memories remain. It does not reset the free allowance."
+      }
+    },
+    {
+      "id": "connection_block",
+      "section": "connections",
+      "es": {
+        "question": "¿Qué cambia si bloqueo a alguien?",
+        "answer": "Bloquear corta nuevas invitaciones y juegos entre ustedes. Podés revisar o quitar bloqueos desde Configuración."
+      },
+      "en": {
+        "question": "What changes when I block someone?",
+        "answer": "Blocking stops new invitations and games between you. You can review or remove blocks in Settings."
+      }
+    },
+    {
+      "id": "connection_report",
+      "section": "connections",
+      "es": {
+        "question": "¿Qué pasa si reporto una conexión?",
+        "answer": "Se pausa la interacción entre ustedes mientras se revisa el caso. Un reporte no cierra una cuenta automáticamente."
+      },
+      "en": {
+        "question": "What happens when I report a connection?",
+        "answer": "Interaction between you is paused while the case is reviewed. A report does not automatically close an account."
+      }
+    },
+    {
+      "id": "content_report",
+      "section": "connections",
+      "es": {
+        "question": "¿Reportar un mensaje también bloquea a la persona?",
+        "answer": "No. El reporte envía ese contenido para revisión, pero no bloquea ni pausa la conexión por sí solo. Podés bloquear aparte."
+      },
+      "en": {
+        "question": "Does reporting a message also block the person?",
+        "answer": "No. It sends that item for review but does not block or pause the connection by itself. You can block separately."
+      }
+    },
+    {
+      "id": "relationship_type",
+      "section": "connections",
+      "es": {
+        "question": "¿Tenemos que ser pareja para jugar?",
+        "answer": "No. La relación que elegís ayuda a mostrar actividades adecuadas. Algunas opciones románticas o Spicy tienen requisitos adicionales."
+      },
+      "en": {
+        "question": "Do we have to be a couple to play?",
+        "answer": "No. Your chosen relationship type helps show suitable activities. Romantic or Spicy options may have extra requirements."
+      }
+    },
+    {
+      "id": "question",
+      "section": "questions",
+      "es": {
+        "question": "¿Qué hago en Una buena pregunta?",
+        "answer": "Elegí una pregunta breve para empezar una conversación. También podés escoger una ronda de nueve o jugar en persona."
+      },
+      "en": {
+        "question": "What is One good question?",
+        "answer": "Choose one short question to start a conversation. You can also pick a nine-question round or play in person."
+      }
+    },
+    {
+      "id": "nine_questions",
+      "section": "questions",
+      "es": {
+        "question": "¿Cómo funcionan las 9 preguntas?",
+        "answer": "Cada quien elige temas y confirma su mezcla. Después responden nueve preguntas por separado y comparan al revelarlas."
+      },
+      "en": {
+        "question": "How do the 9 questions work?",
+        "answer": "Each of you chooses topics and confirms a mix. Then you answer nine questions separately and compare when they are revealed."
+      }
+    },
+    {
+      "id": "trivia",
+      "section": "questions",
+      "es": {
+        "question": "¿Qué se adivina en Cuánto me conocés?",
+        "answer": "Adivinás un dato real que la otra persona compartió en su ficha. Hay tres opciones y una respuesta correcta."
+      },
+      "en": {
+        "question": "What do I guess in How well do you know me?",
+        "answer": "Guess a real detail the other person shared in their profile. There are three choices and one correct answer."
+      }
+    },
+    {
+      "id": "prediction",
+      "section": "questions",
+      "es": {
+        "question": "¿Cómo funciona Apuesto que elegís…?",
+        "answer": "Cada quien responde cinco dilemas y apuesta qué elegirá la otra persona. Comparan después; no tienen que coincidir."
+      },
+      "en": {
+        "question": "How does I bet you choose… work?",
+        "answer": "You each answer five dilemmas and guess the other person’s choices. Compare afterward; agreeing is not the goal."
+      }
+    },
+    {
+      "id": "leisure",
+      "section": "games",
+      "es": {
+        "question": "¿Qué hay en Ocio?",
+        "answer": "Gato, Ahorcado, rompecabezas y juego presencial. Si ambos activaron Spicy, también pueden aparecer 21 y Dados."
+      },
+      "en": {
+        "question": "What is in Leisure?",
+        "answer": "Tic-tac-toe, Hangman, puzzles, and in-person play. If you both enabled Spicy, 21 and Dice may also appear."
+      }
+    },
+    {
+      "id": "truth",
+      "section": "games",
+      "es": {
+        "question": "¿Cómo juego Dos verdades y una mentira?",
+        "answer": "Escribí tres frases: dos ciertas y una inventada. La otra persona intenta descubrir la mentira."
+      },
+      "en": {
+        "question": "How do I play Two truths and a lie?",
+        "answer": "Write three statements: two true and one made up. The other person tries to spot the lie."
+      }
+    },
+    {
+      "id": "gato",
+      "section": "games",
+      "es": {
+        "question": "¿Cómo juego Gato?",
+        "answer": "Coloquen una marca por turno. Gana quien consiga tres en línea. Si salen, pueden retomar la partida mientras siga disponible."
+      },
+      "en": {
+        "question": "How do I play tic-tac-toe?",
+        "answer": "Place one mark each turn. The first to get three in a row wins. You can return while the game is still available."
+      }
+    },
+    {
+      "id": "hangman",
+      "section": "games",
+      "es": {
+        "question": "¿Cómo juego Ahorcado?",
+        "answer": "Una persona pone una palabra y una pista; la otra prueba letras para adivinarla. Después pueden cambiar de roles."
+      },
+      "en": {
+        "question": "How do I play Hangman?",
+        "answer": "One person sets a word and a hint; the other guesses letters. You can swap roles afterward."
+      }
+    },
+    {
+      "id": "puzzle",
+      "section": "games",
+      "es": {
+        "question": "¿Cómo armamos el rompecabezas?",
+        "answer": "Elijan ilustración y cantidad de piezas. Coloquen una pieza por turno; si activan giros, también hay que orientarla."
+      },
+      "en": {
+        "question": "How do we play the shared puzzle?",
+        "answer": "Choose an illustration and piece count. Place one piece each turn; if rotation is on, orient it too."
+      }
+    },
+    {
+      "id": "drawing",
+      "section": "games",
+      "es": {
+        "question": "¿Cómo funciona Garabato a cuatro manos?",
+        "answer": "Una persona conoce la consigna. Alternen un trazo continuo por turno e intenten adivinar antes de que termine el tiempo."
+      },
+      "en": {
+        "question": "How does Four-hand doodle work?",
+        "answer": "One person knows the prompt. Take turns drawing one continuous stroke and try to guess before time runs out."
+      }
+    },
+    {
+      "id": "blackjack",
+      "section": "games",
+      "es": {
+        "question": "¿Cómo se juega 21 entre dos?",
+        "answer": "Acercate a 21 sin pasarte. Quien pierde le cede su prenda a quien gana. Requiere Spicy y Premium o un extra."
+      },
+      "en": {
+        "question": "How do we play 21 together?",
+        "answer": "Get close to 21 without going over. The loser gives their chosen forfeit to the winner. It needs Spicy and Premium or an extra."
+      }
+    },
+    {
+      "id": "flirt_dice",
+      "section": "games",
+      "es": {
+        "question": "¿Cómo funcionan los Dados Spicy?",
+        "answer": "Tirá dos dados: uno dice qué hacer y el otro, dónde. Requieren Spicy y Premium o un extra."
+      },
+      "en": {
+        "question": "How do Spicy Dice work?",
+        "answer": "Roll two dice: one says what to do, the other where. They need Spicy and Premium or an extra."
+      }
+    },
+    {
+      "id": "in_person",
+      "section": "games",
+      "es": {
+        "question": "¿Podemos jugar con un solo teléfono?",
+        "answer": "Sí. El modo presencial permite preguntas y turnos en un dispositivo, sin vincular dos cuentas."
+      },
+      "en": {
+        "question": "Can we play on one phone?",
+        "answer": "Yes. In-person mode has questions and turns on one device, without linking two accounts."
+      }
+    },
+    {
+      "id": "story",
+      "section": "creative",
+      "es": {
+        "question": "¿Cómo hacemos Una historia entre dos?",
+        "answer": "Escriban cuatro frases por turnos. Cada frase continúa lo que la otra persona dejó; no hay respuesta correcta."
+      },
+      "en": {
+        "question": "How do we make A story together?",
+        "answer": "Write four lines, alternating turns. Each line builds on what the other person wrote; there is no right answer."
+      }
+    },
+    {
+      "id": "memory",
+      "section": "creative",
+      "es": {
+        "question": "¿Qué hacemos en Dos miradas, un recuerdo?",
+        "answer": "Cada quien cuenta cómo recuerda un momento compartido. Después comparan las dos versiones."
+      },
+      "en": {
+        "question": "What is Two views, one memory?",
+        "answer": "You each describe a shared memory, then compare how you remember it."
+      }
+    },
+    {
+      "id": "list",
+      "section": "creative",
+      "es": {
+        "question": "¿Para qué sirve Nuestra lista viva?",
+        "answer": "Guarden ideas compartidas —planes, películas, canciones o lugares— para volver a ellas después."
+      },
+      "en": {
+        "question": "What is Our living list for?",
+        "answer": "Keep shared ideas—plans, films, songs, or places—so you can come back to them later."
+      }
+    },
+    {
+      "id": "dream",
+      "section": "creative",
+      "es": {
+        "question": "¿Qué es Del sueño al primer paso?",
+        "answer": "Elegí una ilusión y proponé un primer paso concreto. Es una conversación, no una promesa automática."
+      },
+      "en": {
+        "question": "What is From dream to first step?",
+        "answer": "Choose a hope and propose one concrete first step. It starts a conversation, not an automatic promise."
+      }
+    },
+    {
+      "id": "mission",
+      "section": "creative",
+      "es": {
+        "question": "¿Cómo funciona Misión secreta?",
+        "answer": "Elegí un gesto pequeño, hacelo sin anunciarlo y dejá que tu conexión intente descubrirlo."
+      },
+      "en": {
+        "question": "How does Secret mission work?",
+        "answer": "Choose a small gesture, do it without announcing it, and let your connection try to guess what it was."
+      }
+    },
+    {
+      "id": "detail",
+      "section": "creative",
+      "es": {
+        "question": "¿Qué puedo enviar en Detalles?",
+        "answer": "Elegí una tarjeta u otro detalle disponible y agregá tus palabras. Las fotos privadas tienen acceso y duración propios."
+      },
+      "en": {
+        "question": "What can I send in Details?",
+        "answer": "Choose a card or another available detail and add your words. Private photos have their own access and expiry rules."
+      }
+    },
+    {
+      "id": "need",
+      "section": "care",
+      "es": {
+        "question": "¿Para qué sirve Esto necesito?",
+        "answer": "Decí qué pasó, cómo te sentís y qué ayuda pequeña te vendría bien. La otra persona puede aceptar, proponer otra cosa o decir que no."
+      },
+      "en": {
+        "question": "What is This is what I need for?",
+        "answer": "Say what happened, how you feel, and one small thing that would help. The other person may agree, suggest another option, or say no."
+      }
+    },
+    {
+      "id": "listen",
+      "section": "care",
+      "es": {
+        "question": "¿Qué hacemos en Escucharte de verdad?",
+        "answer": "Una persona cuenta algo concreto; la otra escucha y resume lo que entendió. Aclaran y cambian de turno."
+      },
+      "en": {
+        "question": "What happens in Really listening?",
+        "answer": "One person shares something specific; the other listens and sums up what they understood. Clarify, then swap turns."
+      }
+    },
+    {
+      "id": "pause",
+      "section": "care",
+      "es": {
+        "question": "¿Qué es Pausa con regreso?",
+        "answer": "Sirve para pedir un respiro y, si ambos quieren, proponer cuándo volver a hablar. Nadie está obligado a retomar."
+      },
+      "en": {
+        "question": "What is Pause and return?",
+        "answer": "It helps you ask for a break and, if you both want, suggest when to talk again. Nobody is required to resume."
+      }
+    },
+    {
+      "id": "decision",
+      "section": "care",
+      "es": {
+        "question": "¿Cómo hacemos Una decisión de los dos?",
+        "answer": "Elijan una decisión pequeña, digan qué les importa y prueben una opción que respete ambos límites."
+      },
+      "en": {
+        "question": "How do we make A decision together?",
+        "answer": "Pick a small decision, say what matters to each of you, and try an option that respects both boundaries."
+      }
+    },
+    {
+      "id": "presence",
+      "section": "care",
+      "es": {
+        "question": "¿Qué hacemos en Un ratito presentes?",
+        "answer": "Compartan un momento breve sin teléfonos. Pueden mirar algo juntos, guardar silencio o mirarse; cualquiera puede parar."
+      },
+      "en": {
+        "question": "What is A moment together?",
+        "answer": "Share a short moment without phones. Look at something together, sit quietly, or look at each other; either can stop."
+      }
+    },
+    {
+      "id": "doctor",
+      "section": "care",
+      "es": {
+        "question": "¿Dr. Corazón es terapia?",
+        "answer": "No. Son ejercicios recreativos de escucha y conversación. No diagnostican su relación ni reemplazan ayuda profesional."
+      },
+      "en": {
+        "question": "Is Dr. Corazón therapy?",
+        "answer": "No. These are recreational listening and conversation exercises. They do not diagnose your relationship or replace professional help."
+      }
+    },
+    {
+      "id": "daily_moment",
+      "section": "moments",
+      "es": {
+        "question": "¿Qué es El momento de hoy?",
+        "answer": "Una dinámica breve que cambia. Puede ser una predicción o un garabato; abrí la tarjeta para ver qué toca hoy."
+      },
+      "en": {
+        "question": "What is Today’s moment?",
+        "answer": "A short activity that changes. It may be a prediction or a doodle; open the card to see today’s version."
+      }
+    },
+    {
+      "id": "brain",
+      "section": "moments",
+      "es": {
+        "question": "¿Por qué Hoy me sugiere algo?",
+        "answer": "Hoy muestra primero respuestas y partidas pendientes. Si no hay nada esperando, propone una dinámica; siempre podés elegir otra."
+      },
+      "en": {
+        "question": "Why does Today suggest something?",
+        "answer": "Today shows waiting replies and games first. If nothing is pending, it suggests an activity; you can always choose another."
+      }
+    },
+    {
+      "id": "chat",
+      "section": "moments",
+      "es": {
+        "question": "¿A dónde llegan mis mensajes de chat?",
+        "answer": "Llegan a la conexión a la que los enviás. No los confundás con respuestas ocultas de un juego; el chat se entrega como mensaje."
+      },
+      "en": {
+        "question": "Where do my chat messages go?",
+        "answer": "They go to the connection you send them to. Chat is not a hidden game answer; it is delivered as a message."
+      }
+    },
+    {
+      "id": "calendar",
+      "section": "moments",
+      "es": {
+        "question": "¿Qué se comparte al importar un plan del calendario?",
+        "answer": "Solo el evento que elegís: título, fecha, hora y ubicación si tiene. No se sube toda tu agenda."
+      },
+      "en": {
+        "question": "What is shared when I import a calendar plan?",
+        "answer": "Only the event you choose: title, date, time, and location if present. Your whole calendar is not uploaded."
+      }
+    },
+    {
+      "id": "hidden_answers",
+      "section": "privacy",
+      "es": {
+        "question": "¿La otra persona ve mis respuestas antes?",
+        "answer": "En juegos de respuestas ocultas, no. Se revelan cuando la dinámica lo permite. Un mensaje de chat sí llega al enviarlo."
+      },
+      "en": {
+        "question": "Can the other person see my answers early?",
+        "answer": "Not in hidden-answer games. Answers appear when the activity allows it. A chat message is delivered when sent."
+      }
+    },
+    {
+      "id": "profile_photo",
+      "section": "privacy",
+      "es": {
+        "question": "¿Puedo ocultar mi foto de perfil?",
+        "answer": "Sí. En tu perfil elegís quién la ve o si no se muestra. Una foto enviada como Detalle tiene reglas distintas."
+      },
+      "en": {
+        "question": "Can I hide my profile photo?",
+        "answer": "Yes. Choose who can see it, or hide it, in your profile. A photo sent as a Detail has separate rules."
+      }
+    },
+    {
+      "id": "private_feedback",
+      "section": "privacy",
+      "es": {
+        "question": "¿Mi estado de ánimo y mis opiniones son privados?",
+        "answer": "El registro personal y la opinión opcional de los ejercicios no se muestran como respuesta a tu conexión. Revisá cada dinámica antes de compartir contenido."
+      },
+      "en": {
+        "question": "Are my mood and exercise feedback private?",
+        "answer": "Your personal check-in and optional exercise feedback are not shown as answers to your connection. Review each activity before sharing content."
+      }
+    },
+    {
+      "id": "daily_limit",
+      "section": "purchases",
+      "es": {
+        "question": "¿Cuándo vuelven las dinámicas gratis?",
+        "answer": "Cada conexión tiene dos inicios gratis al día. Vuelven a medianoche, hora de Costa Rica. Retomar una dinámica abierta no inicia otra."
+      },
+      "en": {
+        "question": "When do free activities reset?",
+        "answer": "Each connection gets two free starts per day. They reset at midnight, Costa Rica time. Resuming an open activity does not start another."
+      }
+    },
+    {
+      "id": "free_exceptions",
+      "section": "purchases",
+      "es": {
+        "question": "¿Qué puedo jugar sin gastar esos dos inicios?",
+        "answer": "Gato, Ahorcado, Dr. Corazón y el momento del día no consumen esos dos inicios."
+      },
+      "en": {
+        "question": "What can I play without using those starts?",
+        "answer": "Tic-tac-toe, Hangman, Dr. Corazón, and the daily moment do not use those two starts."
+      }
+    },
+    {
+      "id": "premium",
+      "section": "purchases",
+      "es": {
+        "question": "¿Qué cambian Premium y un extra?",
+        "answer": "Premium quita el límite diario en las conexiones cubiertas. Un extra permite un inicio adicional en una conexión. Revisá el precio en Google Play antes de pagar."
+      },
+      "en": {
+        "question": "What do Premium and an extra change?",
+        "answer": "Premium removes the daily limit for covered connections. An extra adds one start for a connection. Check the price in Google Play before paying."
+      }
+    },
+    {
+      "id": "spicy",
+      "section": "purchases",
+      "es": {
+        "question": "¿Por qué no aparece Spicy?",
+        "answer": "Ambos deben ser adultos, tener una conexión compatible y activarlo. Algunas opciones también requieren Premium o un extra."
+      },
+      "en": {
+        "question": "Why can I not see Spicy?",
+        "answer": "Both people must be adults, have an eligible connection, and opt in. Some options also need Premium or an extra."
+      }
+    },
+    {
+      "id": "restore_purchases",
+      "section": "purchases",
+      "es": {
+        "question": "¿Pagué y no aparece el beneficio?",
+        "answer": "Revisá que usás la misma cuenta de Google Play y tocá “Restaurar compras” en Premium. Si sigue igual, pasanos el número de pedido, nunca datos de tarjeta."
+      },
+      "en": {
+        "question": "Paid but cannot see the benefit?",
+        "answer": "Check the Google Play account and tap “Restore purchases” in Premium. If it still fails, send us the order number, never card details."
+      }
+    },
+    {
+      "id": "cancel_subscription",
+      "section": "purchases",
+      "es": {
+        "question": "¿Eliminar mi cuenta cancela Premium?",
+        "answer": "No. Cancelá una suscripción activa en Google Play. Eliminar la cuenta de Conoche? es una acción aparte."
+      },
+      "en": {
+        "question": "Does deleting my account cancel Premium?",
+        "answer": "No. Cancel an active subscription in Google Play. Deleting your Conoche? account is a separate action."
+      }
+    },
+    {
+      "id": "account_delete",
+      "section": "support",
+      "es": {
+        "question": "¿Dónde elimino mi cuenta?",
+        "answer": "En Configuración > Cuenta > Eliminar cuenta. Tendrás que confirmar tu identidad. Ocultar una conexión o cerrar sesión no elimina la cuenta."
+      },
+      "en": {
+        "question": "Where do I delete my account?",
+        "answer": "Open Settings > Account > Delete account. You will need to confirm your identity. Hiding a connection or signing out does not delete the account."
+      }
+    },
+    {
+      "id": "support",
+      "section": "support",
+      "es": {
+        "question": "¿Cómo contacto a soporte?",
+        "answer": "Escribí a support@tikiziagames.com. El formulario guarda tu ticket en la app, pero no envía un correo automáticamente; el botón de correo abre tu app de email."
+      },
+      "en": {
+        "question": "How do I contact support?",
+        "answer": "Email support@tikiziagames.com. The form saves a ticket in the app but does not email it automatically; the email button opens your email app."
+      }
+    },
+    {
+      "id": "hello",
+      "section": "support",
+      "es": {
+        "question": "¿Para qué es hello@tikiziagames.com?",
+        "answer": "Es para consultas generales o comerciales. Para cuenta, pagos, seguridad o errores de Conoche?, usá support@tikiziagames.com."
+      },
+      "en": {
+        "question": "What is hello@tikiziagames.com for?",
+        "answer": "It is for general or business inquiries. For account, payment, safety, or app issues, use support@tikiziagames.com."
+      }
+    }
+  ],
+  "legal": [
+    {
+      "id": "terms",
+      "es": {
+        "title": "Términos de uso",
+        "intro": "Conoche? es un juego social de Tikizia Games. Estas reglas explican cómo usar la app, qué pasa con lo que compartís y cómo funcionan las compras y la cuenta."
+      },
+      "en": {
+        "title": "Terms of use",
+        "intro": "Conoche? is a social game by Tikizia Games. These terms explain how to use the app, what happens to shared content, and how purchases and accounts work."
+      },
+      "sections": [
+        {
+          "es": {
+            "heading": "1. Cuenta y edad",
+            "body": "Necesitás una cuenta propia y datos correctos para usar las funciones conectadas. Si te registrás por correo, debés verificarlo. No uses la cuenta de otra persona. Las funciones marcadas 18+ solo son para adultos; no declarés una edad falsa para abrirlas."
+          },
+          "en": {
+            "heading": "1. Account and age",
+            "body": "Connected features require your own account and accurate information. Email sign-up requires verification. Do not use someone else’s account. Features marked 18+ are for adults only; do not enter a false age to unlock them."
+          }
+        },
+        {
+          "es": {
+            "heading": "2. Conexiones voluntarias",
+            "body": "Una conexión aparece cuando la otra persona acepta la invitación. Conectarse no obliga a jugar, responder, conversar ni mantener una relación. Cada persona puede dejar de participar, ocultar la conexión de su lista o bloquear a la otra. Ocultarla no borra el historial."
+          },
+          "en": {
+            "heading": "2. Voluntary connections",
+            "body": "A connection starts when the other person accepts an invitation. It does not require either person to play, answer, chat, or stay in a relationship. Either person can stop, hide the connection from their list, or block the other. Hiding does not delete its history."
+          }
+        },
+        {
+          "es": {
+            "heading": "3. Juegos y contenido compartido",
+            "body": "La app incluye preguntas, juegos por turnos, ejercicios, misiones, detalles, chat y planes. Cada dinámica explica cuándo se envía o revela el contenido. Sos responsable de lo que escribís, dibujás o enviás. Conservás tus derechos sobre ese contenido y autorizás a Conoche? a almacenarlo y mostrarlo solo en la medida necesaria para prestar la función y revisar reportes."
+          },
+          "en": {
+            "heading": "3. Games and shared content",
+            "body": "The app includes questions, turn-based games, exercises, missions, details, chat, and plans. Each activity explains when content is sent or revealed. You are responsible for what you write, draw, or send. You retain your rights in that content and allow Conoche? to store and display it as needed to provide the feature and review reports."
+          }
+        },
+        {
+          "es": {
+            "heading": "4. Respeto y contenido para adultos",
+            "body": "Respetá los límites de la otra persona. No se permiten acoso, amenazas, suplantación, presión sexual ni contenido ilegal. Spicy requiere que ambas personas sean adultas, que la conexión sea compatible y que ambas lo activen. Cualquiera puede retirarlo. Una compra no reemplaza esas condiciones ni el consentimiento."
+          },
+          "en": {
+            "heading": "4. Respect and adult content",
+            "body": "Respect the other person’s boundaries. Harassment, threats, impersonation, sexual pressure, and illegal content are not allowed. Spicy requires two adults in an eligible connection who both opt in. Either can turn it off. A purchase does not replace those conditions or consent."
+          }
+        },
+        {
+          "es": {
+            "heading": "5. Sugerencias y ejercicios",
+            "body": "Las recomendaciones y ejercicios de Conoche? son actividades recreativas. No evalúan la calidad de una relación ni sustituyen terapia, atención médica, asesoría profesional o ayuda de emergencia. Podés omitir una actividad o elegir otra."
+          },
+          "en": {
+            "heading": "5. Suggestions and exercises",
+            "body": "Conoche? recommendations and exercises are recreational. They do not evaluate a relationship or replace therapy, medical care, professional advice, or emergency help. You can skip an activity or choose another."
+          }
+        },
+        {
+          "es": {
+            "heading": "6. Gratis, Premium y extras",
+            "body": "La app muestra qué actividades son gratuitas, cuáles consumen un inicio diario y qué requiere Premium o un extra. El alcance, precio y condiciones de cada compra se muestran antes de confirmar en Google Play. Una suscripción se administra y cancela en Google Play; eliminar tu cuenta de Conoche? no la cancela automáticamente."
+          },
+          "en": {
+            "heading": "6. Free access, Premium, and extras",
+            "body": "The app shows which activities are free, which use a daily start, and what requires Premium or an extra. Google Play shows the scope, price, and terms of a purchase before confirmation. Manage or cancel a subscription in Google Play; deleting a Conoche? account does not automatically cancel it."
+          }
+        },
+        {
+          "es": {
+            "heading": "7. Reportes y medidas",
+            "body": "Podés bloquear a una persona o reportar una conexión o contenido concreto. Reportar la conexión pausa la interacción entre ustedes; reportar una pieza de contenido no la pausa automáticamente. Tikizia Games puede revisar el contexto y aplicar advertencias, límites, suspensión o cierre según el caso. Un reporte por sí solo no determina culpabilidad; tampoco se permite reportar de mala fe."
+          },
+          "en": {
+            "heading": "7. Reports and action",
+            "body": "You can block someone or report a connection or specific content. Reporting a connection pauses interaction between you; reporting one item does not automatically pause the connection. Tikizia Games may review the context and issue warnings, restrictions, suspension, or closure as appropriate. A report alone does not prove wrongdoing; bad-faith reports are also prohibited."
+          }
+        },
+        {
+          "es": {
+            "heading": "8. Cuenta, historial y borrado",
+            "body": "Podés administrar perfil, visibilidad, bloqueos y opciones de borrado desde la app. Quitar una conexión de tu lista solo la oculta. Eliminar tu cuenta es una acción distinta y permanente que requiere confirmar identidad; puede afectar datos compartidos con otras personas. La Política de privacidad explica qué datos se eliminan y cuáles podrían conservarse de forma limitada."
+          },
+          "en": {
+            "heading": "8. Account, history, and deletion",
+            "body": "You can manage your profile, visibility, blocks, and available deletion options in the app. Removing a connection from your list only hides it. Account deletion is a separate, permanent action requiring identity confirmation and may affect data shared with others. The Privacy Policy explains deletion and limited retention."
+          }
+        },
+        {
+          "es": {
+            "heading": "9. Cambios y disponibilidad",
+            "body": "Podemos corregir errores, cambiar o retirar funciones y ajustar límites para mantener el servicio y su seguridad. Si un cambio importante afecta compras, tratamiento de datos o derechos, actualizaremos la información correspondiente y pediremos una nueva aceptación cuando corresponda. No prometemos disponibilidad ininterrumpida."
+          },
+          "en": {
+            "heading": "9. Changes and availability",
+            "body": "We may fix errors, change or remove features, and adjust limits to maintain the service and its safety. For material changes affecting purchases, data handling, or rights, we will update the relevant information and request renewed acceptance when appropriate. We do not promise uninterrupted availability."
+          }
+        },
+        {
+          "es": {
+            "heading": "10. Contacto",
+            "body": "Para problemas de cuenta, seguridad, contenido o pagos, escribí a support@tikiziagames.com. Para consultas generales o comerciales, usá hello@tikiziagames.com."
+          },
+          "en": {
+            "heading": "10. Contact",
+            "body": "For account, safety, content, or payment issues, email support@tikiziagames.com. For general or business inquiries, use hello@tikiziagames.com."
+          }
+        }
+      ]
+    },
+    {
+      "id": "privacy",
+      "es": {
+        "title": "Privacidad",
+        "intro": "En Conoche? unas cosas son tuyas, otras se comparten con la conexión que elegís. Acá explicamos cuáles, para qué sirven y qué podés controlar."
+      },
+      "en": {
+        "title": "Privacy",
+        "intro": "In Conoche?, some things stay yours and others are shared with a connection you choose. Here is what we use, why, and what you control."
+      },
+      "sections": [
+        {
+          "es": {
+            "heading": "1. Quién trata los datos",
+            "body": "Tikizia Games opera Conoche?. Para consultar sobre privacidad o pedir ayuda con tus datos, escribí a support@tikiziagames.com. También podés usar las opciones de cuenta y borrado dentro de la app."
+          },
+          "en": {
+            "heading": "1. Who handles the data",
+            "body": "Tikizia Games operates Conoche?. For privacy questions or help with your data, email support@tikiziagames.com. Account and deletion controls are also available in the app."
+          }
+        },
+        {
+          "es": {
+            "heading": "2. Cuenta y perfil",
+            "body": "Guardamos identificadores de cuenta, correo, nombre, alias, estado de verificación, información de edad necesaria para las restricciones, avatar o foto opcional y preferencias de visibilidad. Usamos esos datos para iniciar sesión, identificarte ante tus conexiones y aplicar controles de seguridad."
+          },
+          "en": {
+            "heading": "2. Account and profile",
+            "body": "We store account identifiers, email, name, alias, verification status, age information needed for restrictions, an optional avatar or photo, and visibility choices. We use these to sign you in, identify you to connections, and enforce safety controls."
+          }
+        },
+        {
+          "es": {
+            "heading": "3. Conexiones y actividad",
+            "body": "Guardamos invitaciones, estado de cada conexión, turnos, respuestas, preguntas libres, elecciones, dibujos, progreso, planes, recuerdos, listas, misiones y detalles que uses. La otra persona ve el contenido que enviás o que la dinámica revela; las respuestas ocultas no deben mostrarse antes de su revelación."
+          },
+          "en": {
+            "heading": "3. Connections and activity",
+            "body": "We store invitations, connection status, turns, answers, custom questions, choices, drawings, progress, plans, memories, lists, missions, and details you use. The other person sees content you send or that an activity reveals; hidden answers are not meant to appear before reveal."
+          }
+        },
+        {
+          "es": {
+            "heading": "4. Chat, fotos y contenido privado",
+            "body": "Los mensajes de chat llegan a la conexión a la que se envían. Podés elegir o tomar una foto para tu perfil o un Detalle privado. Los Detalles con foto tienen acceso y duración propios, pero la otra persona podría hacer una captura. Si se reporta contenido, puede conservarse una copia restringida como evidencia durante el plazo indicado en esa función."
+          },
+          "en": {
+            "heading": "4. Chat, photos, and private content",
+            "body": "Chat messages go to the connection you send them to. You may choose or take a photo for your profile or a private Detail. Photo Details have their own access and availability rules, but the recipient may take a screenshot. Reported content may have a restricted evidence copy retained for the period stated in that feature."
+          }
+        },
+        {
+          "es": {
+            "heading": "5. Sugerencias y señales privadas",
+            "body": "Las preferencias, registros de ánimo y opiniones opcionales ayudan a elegir sugerencias o ejercicios. Lo marcado como privado no se muestra como respuesta a tu conexión. Las actividades compartidas y tus mensajes sí pueden ser visibles según sus reglas. Podés retirar permisos u opiniones cuando la función ofrezca ese control."
+          },
+          "en": {
+            "heading": "5. Suggestions and private signals",
+            "body": "Optional preferences, mood check-ins, and feedback help choose suggestions or exercises. Items marked private are not shown to your connection as your answers. Shared activities and messages may be visible under their own rules. You can withdraw optional permissions or feedback where the feature provides that control."
+          }
+        },
+        {
+          "es": {
+            "heading": "6. Calendario y permisos del dispositivo",
+            "body": "En Android, conectar tu calendario es opcional. La app puede leer nombres de calendarios y mostrar eventos candidatos en el dispositivo para que elijás. Solo el evento que importás como plan compartido envía su título, fecha, hora y ubicación a Conoche?. Cámara, fotos y notificaciones se usan cuando elegís esas funciones o das el permiso; no subimos toda tu agenda."
+          },
+          "en": {
+            "heading": "6. Calendar and device permissions",
+            "body": "On Android, calendar connection is optional. The app may read calendar names and show candidate events on your device so you can choose. Only an event you import as a shared plan sends its title, date, time, and location to Conoche?. Camera, photos, and notifications are used when you choose those features or grant permission; we do not upload your entire calendar."
+          }
+        },
+        {
+          "es": {
+            "heading": "7. Compras y datos técnicos",
+            "body": "Google Play procesa el pago. Conoche? recibe identificadores y estado de compra necesarios para activar Premium o extras, no los datos de tu tarjeta. También usamos tokens de notificación y registros técnicos necesarios para entregar avisos, proteger cuentas y evitar duplicar compras."
+          },
+          "en": {
+            "heading": "7. Purchases and technical data",
+            "body": "Google Play processes payment. Conoche? receives purchase identifiers and status needed to enable Premium or extras, not your card details. We also use notification tokens and technical records needed to deliver notices, protect accounts, and prevent duplicate purchases."
+          }
+        },
+        {
+          "es": {
+            "heading": "8. Soporte, bloqueos y reportes",
+            "body": "Guardamos tickets, bloqueos, reportes, motivos y el contexto necesario para revisar un caso. Un ticket enviado desde la app se registra allí; hoy no envía automáticamente un correo a soporte. Si querés escribir por correo, usá support@tikiziagames.com. El acceso a estos registros debe limitarse al personal que los atiende."
+          },
+          "en": {
+            "heading": "8. Support, blocks, and reports",
+            "body": "We store tickets, blocks, reports, reasons, and context needed to review a case. An in-app ticket is saved there; it does not currently email support automatically. To email us, use support@tikiziagames.com. Access to these records should be limited to staff handling the case."
+          }
+        },
+        {
+          "es": {
+            "heading": "9. Proveedores y destinatarios",
+            "body": "Usamos servicios de Google y Firebase para inicio de sesión, base de datos, almacenamiento, funciones, notificaciones y compras. Resend procesa en Estados Unidos el correo y el contenido de los mensajes de verificación de cuenta y recuperación de contraseña que solicitás; conserva su copia y registros de esos envíos durante 30 días. Un proveedor de correo también puede recibir los mensajes que nos enviés a soporte. Compartimos con tu conexión solamente lo necesario para las funciones que elegís. No vendemos datos personales ni los compartimos con anunciantes para publicidad dirigida."
+          },
+          "en": {
+            "heading": "9. Providers and recipients",
+            "body": "We use Google and Firebase for sign-in, database, storage, functions, notifications, and purchases. Resend processes the email address and content of account verification and password reset messages you request in the United States; it retains its copy and delivery records for 30 days. An email provider may also receive messages you send to support. We share with your connection only what is needed for the features you choose. We do not sell personal data or share it with advertisers for targeted ads."
+          }
+        },
+        {
+          "es": {
+            "heading": "10. Conservación",
+            "body": "No todo vence o se borra al mismo tiempo. Una partida puede dejar de estar disponible sin que todos sus registros desaparezcan de inmediato. Las fotos privadas, opiniones opcionales y evidencias reportadas tienen reglas propias indicadas en su flujo. Para seguridad y seguimiento de los correos de cuenta, guardamos durante aproximadamente un año el destinatario, tipo, fecha y referencia del envío aceptado por Resend; no guardamos el enlace de acceso ni el contenido en ese registro. El historial que podés borrar desde una conexión no equivale a borrar todos los datos de la cuenta. Algunos registros mínimos pueden mantenerse por seguridad, compras u obligaciones legales."
+          },
+          "en": {
+            "heading": "10. Retention",
+            "body": "Not everything expires or is deleted at the same time. A game may become unavailable before all related records are deleted. Private photos, optional feedback, and reported evidence have feature-specific rules shown in their flows. For account-email security and support, we keep the recipient, type, date, and provider reference of an accepted message for approximately one year; that record contains neither the action link nor the message body. Deleting available connection history is not the same as deleting all account data. Limited records may remain for safety, purchases, or legal obligations."
+          }
+        },
+        {
+          "es": {
+            "heading": "11. Tus controles y eliminación",
+            "body": "Podés editar el perfil, controlar la foto, bloquear personas, ocultar conexiones, borrar el historial que la app permita y eliminar tu cuenta desde Configuración. También hay una ruta pública de eliminación en tikiziagames.com/delete-account/. La eliminación de cuenta requiere confirmar identidad y no cancela una suscripción de Google Play."
+          },
+          "en": {
+            "heading": "11. Your controls and deletion",
+            "body": "You can edit your profile, control photo visibility, block people, hide connections, delete history where the app offers that option, and delete your account in Settings. A public deletion route is also available at tikiziagames.com/delete-account/. Account deletion requires identity confirmation and does not cancel a Google Play subscription."
+          }
+        },
+        {
+          "es": {
+            "heading": "12. Seguridad y cambios",
+            "body": "Usamos conexiones cifradas y reglas de acceso para limitar quién puede leer datos. Ningún sistema evita por completo capturas de pantalla o reenvíos que haga la persona destinataria. Si cambiamos de forma importante el uso de datos, actualizaremos esta explicación y pediremos un nuevo consentimiento cuando corresponda."
+          },
+          "en": {
+            "heading": "12. Security and changes",
+            "body": "We use encrypted connections and access rules to limit who can read data. No system can fully prevent screenshots or forwarding by a recipient. If we materially change how data is used, we will update this explanation and request renewed consent when appropriate."
+          }
+        }
+      ]
+    },
+    {
+      "id": "community",
+      "es": {
+        "title": "Normas de la comunidad",
+        "intro": "La gracia es jugar con otra persona, no ponerla contra la pared. Estas reglas aplican a juegos, chat, fotos, invitaciones y cualquier contenido compartido."
+      },
+      "en": {
+        "title": "Community guidelines",
+        "intro": "The point is to play with another person, not corner them. These rules apply to games, chat, photos, invitations, and all shared content."
+      },
+      "sections": [
+        {
+          "es": {
+            "heading": "1. No presionés",
+            "body": "Un no es un no, también dentro de un juego. Nadie debe responder una pregunta, mostrar una foto, aceptar una apuesta, activar Spicy ni continuar una dinámica para complacer a la otra persona. No uses la app para acosar, intimidar o insistir después de un límite."
+          },
+          "en": {
+            "heading": "1. No pressure",
+            "body": "No means no, including during a game. Nobody has to answer a question, share a photo, accept a dare, enable Spicy, or keep playing to please someone else. Do not use the app to harass, intimidate, or push past a boundary."
+          }
+        },
+        {
+          "es": {
+            "heading": "2. Protegé a otras personas",
+            "body": "No se permiten amenazas, discriminación, chantaje, suplantación, exposición de datos ajenos ni contenido ilegal. No difundás mensajes, dibujos o fotos de otra persona sin su permiso. Lo que se envía puede ser capturado por quien lo recibe: pensalo antes de compartir."
+          },
+          "en": {
+            "heading": "2. Protect others",
+            "body": "Threats, discrimination, blackmail, impersonation, exposing another person’s information, and illegal content are not allowed. Do not distribute someone else’s messages, drawings, or photos without permission. A recipient may capture what you send; consider that before sharing."
+          }
+        },
+        {
+          "es": {
+            "heading": "3. Spicy es solo para adultos que lo eligen",
+            "body": "Está prohibido usar funciones 18+ con menores o mentir sobre la edad. Ambas personas adultas deben activar Spicy; cualquiera puede apagarlo. No enviés contenido sexual no solicitado ni uses compras o recompensas como presión."
+          },
+          "en": {
+            "heading": "3. Spicy is for adults who opt in",
+            "body": "Do not use 18+ features with minors or misstate your age. Both adults must opt in to Spicy, and either may turn it off. Do not send unsolicited sexual content or use purchases or rewards as pressure."
+          }
+        },
+        {
+          "es": {
+            "heading": "4. Bloquear, ocultar y reportar",
+            "body": "Ocultar una conexión solo la quita de tu lista. Bloquear corta nuevas invitaciones e interacción entre ustedes. Reportar una conexión la pausa mientras se revisa; reportar un mensaje o detalle concreto no la pausa ni bloquea automáticamente. Podés usar estas opciones por separado."
+          },
+          "en": {
+            "heading": "4. Hide, block, and report",
+            "body": "Hiding a connection removes it from your list only. Blocking stops new invitations and interaction between you. Reporting a connection pauses it during review; reporting one message or detail does not automatically pause or block it. These controls can be used separately."
+          }
+        },
+        {
+          "es": {
+            "heading": "5. Cómo se revisa un caso",
+            "body": "Podemos revisar el reporte y el contexto limitado que la función adjunta, pedir más información y tomar una medida proporcionada. Una denuncia no cierra una cuenta automáticamente. No prometemos resolver todos los casos en un plazo fijo. Si hay peligro inmediato, buscá ayuda de los servicios de emergencia de tu zona."
+          },
+          "en": {
+            "heading": "5. How a case is reviewed",
+            "body": "We may review a report and the limited context attached by the feature, request more information, and take proportionate action. A report does not automatically close an account. We do not promise to resolve every case within a fixed time. If there is immediate danger, contact local emergency services."
+          }
+        },
+        {
+          "es": {
+            "heading": "6. Consecuencias y revisión",
+            "body": "Según el caso, podemos advertir, restringir funciones, suspender o cerrar una cuenta. Una suscripción no exime de estas reglas. No se permite reportar de mala fe para castigar a alguien. Si creés que hubo un error, escribí a support@tikiziagames.com con el contexto, sin reenviar material íntimo innecesario."
+          },
+          "en": {
+            "heading": "6. Action and follow-up",
+            "body": "Depending on the case, we may warn, restrict features, suspend, or close an account. A subscription does not exempt anyone. Bad-faith reporting to punish someone is not allowed. If you think we made a mistake, email support@tikiziagames.com with context, without forwarding unnecessary intimate material."
+          }
+        }
+      ]
+    }
+  ]
+}

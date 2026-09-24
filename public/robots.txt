@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /auth/
+Disallow: /abrir-conoche/
+
+Sitemap: https://tikiziagames.com/sitemap.xml
