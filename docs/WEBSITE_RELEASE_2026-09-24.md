@@ -59,7 +59,7 @@ exists. Do not change store declarations, paid plans or app rollout in this task
 
 ## Regression protections and QA
 
-- 52 Node tests cover 23 HTML documents, internal links/anchors/assets, 51 FAQ
+- 53 Node tests cover 23 HTML documents, internal links/anchors/assets, 51 FAQ
   answers in each language, all in-app legal sections, metadata, deletion CTA,
   store/test links, sitemap and three protected account/App Link files.
 - Protected route contents match the pre-refresh baseline (normalizing only
@@ -70,4 +70,29 @@ exists. Do not change store declarations, paid plans or app rollout in this task
 - The old self-writing legal workflow becomes read-only validation, preventing
   it from overwriting the refreshed policies on a later run.
 
-Browser and production verification results are recorded below after deployment.
+## Browser and deployment verification
+
+- Existing Cloudflare Pages project confirmed: `tikizia-games-website`,
+  production `main`, existing domain `tikiziagames.com`. No new paid resources.
+- Preview deployed through the existing Git integration. Checked layout at
+  widths 320, 390, 768 and 1366 px; no horizontal overflow in tested routes.
+- Browser checks: 51 answers per language; Garabato expansion; `conexion`
+  matches accented text (11 results); no-results state; topic navigation resets
+  search; keyboard expansion; corresponding English FAQ; legal/deletion pages.
+- Spanish and English invalid-link states and the return-to-app fallback work.
+  No real account token was used, no password changed and no test email sent.
+- Main text contrast: navy 10.74:1, secondary text 5.50:1, buttons 4.99:1,
+  small green labels 5.29:1; large gold brand lettering 3.14:1.
+- Linux CI initially caught a Windows mixed-newline baseline in the protected
+  route hash test. The baseline now hashes the actual original Git blobs after
+  LF normalization. No protected route source was changed. CI subsequently passed.
+- Production-only Cloudflare email obfuscation was detected by the live hash
+  verifier. Public business contacts now use the documented `email_off` HTML
+  markers, so they remain usable without JavaScript. This does not change any
+  domain-wide security setting. Reference:
+  https://developers.cloudflare.com/waf/tools/scrape-shield/email-address-obfuscation/
+- Old homepage anchors for help/support/contact/deletion remain as visible
+  links to the corresponding pages. `/games/conoche` and `/help/` redirect.
+- `verify-deployment.mjs` checks all 22 pages, protected routes, sitemap,
+  robots and current assets against local content, plus redirect/404 behavior
+  and account-action privacy headers. Its output is the final deployment gate.

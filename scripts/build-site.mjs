@@ -14,7 +14,7 @@ const stamp = '2026-09-24';
 const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const route = (id, lang) => `${lang === 'en' ? '/en' : ''}/${id ? id + '/' : ''}`;
 const choose = (lang, es, en) => lang === 'es' ? es : en;
-const link = (href, label, cls = '') => `<a${cls ? ` class="${cls}"` : ''} href="${escape(href)}">${label}</a>`;
+const link = (href, label, cls = '', id = '') => `<a${id ? ` id="${id}"` : ''}${cls ? ` class="${cls}"` : ''} href="${escape(href)}">${label}</a>`;
 const mail = (subject, body = '', address = 'support@tikiziagames.com') => `mailto:${address}?subject=${encodeURIComponent(subject)}${body ? '&body=' + encodeURIComponent(body) : ''}`;
 const iconPaths = {
   arrow: '<path d="M5 12h14m-6-6 6 6-6 6"/>',
@@ -54,6 +54,7 @@ ${json ? `<script type="application/ld+json">${JSON.stringify(json).replace(/</g
 <script src="/assets/js/site.js?v=${stamp}" defer></script>
 </head>
 <body class="${kind}">
+<!--email_off-->
 <a class="skip-link" href="#main">${t('Saltar al contenido','Skip to content')}</a>
 <header class="site-header"><div class="header-inner">
 ${link(route('',lang), '<span class="studio-logo">TIKIZIA<span>GAMES</span></span>', 'brand')}
@@ -63,10 +64,11 @@ ${link(route('',lang), '<span class="studio-logo">TIKIZIA<span>GAMES</span></spa
 <main id="main" tabindex="-1">${body}</main>
 <footer class="site-footer"><div class="footer-grid wrap">
 <div><span class="studio-logo">TIKIZIA<span>GAMES</span></span><p>${t('Juegos hechos para conectar.','Games made for connection.')}<br>${t('Con cariño, desde Costa Rica.','Made with care in Costa Rica.')}</p><span class="flag" aria-label="Costa Rica"></span></div>
-<div><h2>${t('Por aquí','Explore')}</h2>${[['conoche','Conoche?','Conoche?'],['download','Descargar / testers','Download / testers'],['faq','Preguntas frecuentes','FAQ'],['support','Soporte','Support'],['contact','Contacto','Contact']].map(([slug,es,en]) => link(route(slug,lang),t(es,en))).join('')}</div>
-<div><h2>${t('Tu tranquilidad','Your peace of mind')}</h2>${policies.map(([slug,es,en]) => link(route(slug,lang),t(es,en))).join('')}</div>
+<div><h2>${t('Por aquí','Explore')}</h2>${[['conoche','Conoche?','Conoche?'],['download','Descargar / testers','Download / testers'],['faq','Preguntas frecuentes','FAQ'],['support','Soporte','Support'],['contact','Contacto','Contact']].map(([slug,es,en]) => link(route(slug,lang),t(es,en),'',id==='' ? slug : '')).join('')}</div>
+<div><h2>${t('Tu tranquilidad','Your peace of mind')}</h2>${policies.map(([slug,es,en]) => link(route(slug,lang),t(es,en),'',id==='' ? slug : '')).join('')}</div>
 <div><h2>${t('Hablemos','Say hello')}</h2>${link('mailto:support@tikiziagames.com','support@tikiziagames.com')}${link('mailto:hello@tikiziagames.com','hello@tikiziagames.com')}<p>${t('Ayuda con la app / colaboraciones.','App support / collaborations.')}</p></div>
 </div><div class="footer-bottom wrap"><span>© 2026 Tikizia Games</span><span>${t('Marca operada por Luis Diego Mora · Costa Rica','A brand operated by Luis Diego Mora · Costa Rica')}</span></div></footer>
+<!--/email_off-->
 </body></html>\n`;
 }
 

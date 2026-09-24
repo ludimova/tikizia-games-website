@@ -12,6 +12,7 @@ Use Node.js 22 or later, with no package installation:
 node scripts/build-site.mjs
 node --test scripts/test-site.mjs
 node scripts/preview.mjs
+node scripts/verify-deployment.mjs https://tikiziagames.com
 ```
 
 The preview listens only on `127.0.0.1:4173`. Cloudflare Pages serves `public/`.
@@ -36,6 +37,9 @@ consistent with the app and Play Console disclosures.
 The mascot is the approved app asset, copied without modification. Fonts are
 self-hosted and their OFL licenses are included in `public/assets/fonts/`.
 No visitor analytics or marketing SDK has been added. Search runs locally.
+Public business contact addresses are deliberately readable without JavaScript,
+using Cloudflare's documented HTML `email_off` comments; zone-wide security,
+DNS and account settings are unchanged.
 
 ## Protected routes
 

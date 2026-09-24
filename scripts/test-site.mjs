@@ -23,6 +23,7 @@ for(const [file,source] of html) {
     assert.match(source,/<link rel="canonical" href="https:\/\/tikiziagames.com\//);
     assert.match(source,/support@tikiziagames\.com/);
     assert.match(source,/hello@tikiziagames\.com/);
+    assert.match(source,/<!--email_off-->/,'Public contact addresses must work without Cloudflare email-decode JavaScript');
     assert.match(source,/href="(?:\/en)?\/delete-account\/"/);
     assert.match(source,/href="(?:\/en)?\/privacy\/"/);
     assert.match(source,/href="(?:\/en)?\/child-safety\/"/);
@@ -115,4 +116,9 @@ test('sitemap covers 22 localized pages and excludes action links',async()=>{
   assert.equal((map.match(/<loc>/g)||[]).length,22);
   assert.doesNotMatch(map,/auth\/|abrir-conoche/);
   for(const m of map.matchAll(/<loc>https:\/\/tikiziagames.com([^<]+)<\/loc>/g))assert.ok((await stat(path.join(root,m[1],'index.html'))).isFile());
+});
+
+test('old homepage support, FAQ, contact and deletion bookmarks still have visible destinations',async()=>{
+  const home=await read('index.html');
+  for(const id of ['games','about','support','faq','contact','delete-account'])assert.ok(home.includes(`id="${id}"`),id);
 });
