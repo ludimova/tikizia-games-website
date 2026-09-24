@@ -57,4 +57,17 @@ Cloudflare Git preview instead, without weakening any browser protection.
   FAQ navigation and language switching work; searching “doodle” yields two
   answers in English and switching language restores the full Spanish FAQ.
 - GitHub validation and Cloudflare preview deployment both passed.
-- Production promotion and final deployed-file comparison: pending.
+- Final preview `56fd2fc0.tikizia-games-website.pages.dev`: the compact mobile
+  header is 120 px tall at 390 px width, with no horizontal overflow. File
+  verifier passed for all 42 routes/assets, two redirects and the 404 response.
+- Published through the existing `main` integration at commit `3f612a4`.
+  `verify-deployment.mjs https://tikiziagames.com` passed for all 42 routes and
+  assets, both redirects, the real 404 and protected account-action headers.
+- Production browser check: the homepage title and H1 identify Tikizia Games;
+  the Conoche card actually opens `/conoche/` with the game introduction and
+  FAQ/support navigation. Clicking the studio header returns to the restored
+  homepage. Mobile rendering has no horizontal overflow. Temporary viewport
+  overrides were reset after verification.
+- This task does not complete the separate physical-device, billing or push
+  notification QA request. That app work was paused for this user correction;
+  no purchase was confirmed and no app build was published in this follow-up.
